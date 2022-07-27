@@ -1,0 +1,27 @@
+footer{
+    background-color: rgba(5, 33, 62, 0.6);
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 10% 30% 30% 30% ;
+    
+    padding: 100px 50px 10px 50px;
+    font-size: small;
+}
+
+.grid a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid ul {
+    list-style-type: none;
+}
+
+.logo {
+    align-content: center;
+    text-align: center;
+    
+}
