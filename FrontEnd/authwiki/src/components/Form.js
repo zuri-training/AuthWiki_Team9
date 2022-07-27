@@ -4,6 +4,7 @@ const Form = ({
   placeholder,
   handleChange,
   _name,
+  _value,
   diff = false,
 }) => {
   return (
@@ -17,6 +18,7 @@ const Form = ({
         className="input-box"
         placeholder={placeholder}
         onChange={handleChange}
+        value={_value}
       />
       {diff && <Terms />}
     </div>
