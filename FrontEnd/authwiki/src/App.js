@@ -11,7 +11,7 @@ function App() {
         <Route path="register" element={<Register />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
-      <ToastContainer />
+      <ToastContainer style={{ fontSize: "2rem" }} />
     </BrowserRouter>
   );
 }

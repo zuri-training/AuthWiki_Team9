@@ -45,7 +45,8 @@ const userSlice = createSlice({
       toast.success("Account created Successfully ");
     },
     [registerUser.rejected]: (state, { payload }) => {
-      toast.error("Your registration credentials is invalid: Bad Request");
+      toast.error("Your info are invalid");
+      toast.error("Your email must be unique");
     },
     [loginUser.pending]: (state) => {
       state.isLoading = true;

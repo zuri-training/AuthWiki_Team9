@@ -7,6 +7,7 @@ import Google from "../icons/Google";
 import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const initialState = {
@@ -22,7 +23,12 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const { email, firstName, lastName, password } = values;
+    if (!email || !firstName || !lastName || !password) {
+      toast.error("Please fill out all the fields");
+      return;
+    }
     dispatch(registerUser({ email, firstName, lastName, password }));
+    return;
   };
   const handleChange = (e) => {
     const name = e.target.name;
@@ -81,6 +87,7 @@ const Register = () => {
                 _name="firstName"
                 placeholder="John"
                 handleChange={handleChange}
+                value={values.firstName}
               />
               <Form
                 labelText="Last Name"
@@ -88,6 +95,7 @@ const Register = () => {
                 _name="lastName"
                 placeholder="Mark"
                 handleChange={handleChange}
+                value={values.lastName}
               />
               <Form
                 labelText="Email"
@@ -95,6 +103,7 @@ const Register = () => {
                 _name="email"
                 placeholder="example@example.com"
                 handleChange={handleChange}
+                value={values.email}
               />
               <Form
                 labelText="Password"
@@ -102,6 +111,7 @@ const Register = () => {
                 _name="password"
                 placeholder="Password"
                 handleChange={handleChange}
+                value={values.password}
                 diff={true}
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>

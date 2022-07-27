@@ -7,6 +7,7 @@ import LoginSVG from "../icons/LoginSVG";
 import Container from "../css/Login";
 import { Link } from "react-router-dom";
 import Form from "../components/Form";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const initialState = {
@@ -24,34 +25,14 @@ const Login = () => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log(...values);
     const { email, password } = values;
+    if (!email || !password) {
+      toast.error("Please fill out all the fields");
+      return;
+    }
     dispatch(loginUser({ email, password }));
+    return;
   };
-  // return (
-  //   <div>
-  //     <h1>Login Page</h1>
-  //     <form>
-  //       <input
-  //         type="email"
-  //         name="email"
-  //         value={values.email}
-  //         onChange={onChange}
-  //       />
-  //       <input
-  //         type="password"
-  //         name="password"
-  //         value={values.password}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <button type="submit" onClick={onSubmit}>
-  //         Login
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
-
   return (
     <Container>
       <section className="section">
@@ -64,12 +45,16 @@ const Login = () => {
                 type="email"
                 placeholder="example@example.com"
                 handleChange={handleChange}
+                value={values.email}
+                _name="email"
               />
               <Form
                 labelText="Password"
                 type="password"
                 placeholder="Password"
                 handleChange={handleChange}
+                value={values.password}
+                _name="password"
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>
                 Login
