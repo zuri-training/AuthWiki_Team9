@@ -10,6 +10,7 @@ export const registerUser = createAsyncThunk(
   "user/register",
   async (user, thunkAPI) => {
     try {
+      console.log(user);
       const response = await customFetch.post("/user/register", user);
       return response.data;
     } catch (error) {
@@ -44,15 +45,13 @@ const userSlice = createSlice({
       toast.success("Account created Successfully ");
     },
     [registerUser.rejected]: (state, { payload }) => {
-      console.log(payload);
-      toast.error(payload["email"][0]);
-      toast.error(payload["password"][0]);
+      toast.error("Your registration credentials is invalid: Bad Request");
     },
     [loginUser.pending]: (state) => {
       state.isLoading = true;
     },
     [loginUser.fulfilled]: (state) => {
-      //   toast.success("login Successfully");
+      toast.success("Login Successfully");
     },
     [loginUser.rejected]: (state, { payload }) => {
       toast.error(payload);
