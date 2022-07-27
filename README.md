@@ -29,7 +29,7 @@
    <!-- - Create a new branch with your feature / task name you are adding e.g "ft-Add new channel". To do this, type:
      `git checkout -b ft-Add new channel` -->
    - Add your changes using:
-     `git add . `
+     `git add file_name `
    - Commit your changes to the branch with a message using
      `git commit -m "Commit message"`
 
