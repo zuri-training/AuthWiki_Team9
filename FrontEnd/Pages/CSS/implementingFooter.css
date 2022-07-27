@@ -14,10 +14,10 @@ footer{
 
 .grid {
     display: grid;
-    grid-template-columns: 10% 30% 30% 30% ;
+    grid-template-columns: auto auto auto auto;
     
-    padding: 100px 50px 10px 50px;
-    font-size: small;
+    padding: 10px 50px 100px 50px;
+    
 }
 
 .grid a {
@@ -30,7 +30,7 @@ footer{
 }
 
 .right {
-    padding: 0 5%;
+    padding: 0 4%;
 }
 
 .logo {
