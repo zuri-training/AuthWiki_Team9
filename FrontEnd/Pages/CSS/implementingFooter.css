@@ -1,6 +1,15 @@
 footer{
-    background-color: rgba(5, 33, 62, 0.6);
-    color: white;
+    background-color: #1c3b5a;
+    color: #FDFEF8;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.head {
+    font-size: 18px;
 }
 
 .grid {
@@ -13,15 +22,17 @@ footer{
 
 .grid a {
     text-decoration: none;
-    color: white;
+    color: #FDFEF8;
 }
 
 .grid ul {
     list-style-type: none;
 }
 
+.right {
+    padding: 0 5%;
+}
+
 .logo {
-    align-content: center;
-    text-align: center;
-    
+    padding: 0 0.5%;
 }
