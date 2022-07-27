@@ -104,6 +104,18 @@ const Container = styled.main`
     justify-items: center;
     gap: 1rem;
   }
+  .terms {
+    color: #d3d4cf;
+    font-weight: 700;
+    font-size: 1.35rem;
+  }
+  .condition {
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .checkbox {
+    margin-right: 1rem;
+  }
 `;
 
 export default Container;
