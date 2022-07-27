@@ -1,0 +1,36 @@
+Body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#04172A;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  } 
+  .wrapper{
+      text-align: center
+  }
+  .wrapper h2{
+  
+      color:#fff;   
+       margin:80x 0;
+      font-size:2.5rem;
+     
+  }
+  .wrapper img{
+      width:600px;
+      max-width:75%;
+  }
+  .wrapper h4{
+      color:#fff;
+      margin:40px 0 20px;
+      font-size:1.2rem;
+        
+  }
+  .main-btn{
+      padding:8px ;
+      background-color: white
+      font-weight700;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      cursor: pointer;
+  }
