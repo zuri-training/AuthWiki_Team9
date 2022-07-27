@@ -1,7 +1,7 @@
 import { Home, Register, Login, Error } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-
+import "./App.css";
 function App() {
   return (
     <BrowserRouter>
