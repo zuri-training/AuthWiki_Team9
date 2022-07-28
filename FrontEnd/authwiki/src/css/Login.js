@@ -10,7 +10,7 @@ const Container = styled.main`
     margin-bottom: 3.5rem;
     font-weight: 700;
     line-height: 9.5rem;
-    word-spacing: 16px;
+    word-spacing: 8px;
   }
   .login-container {
     display: flex;
@@ -31,6 +31,7 @@ const Container = styled.main`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
   }
   .login-item-svg {
     padding: 4rem;
@@ -99,6 +100,14 @@ const Container = styled.main`
   }
   .checkbox {
     margin-right: 1rem;
+  }
+  .password {
+    position: absolute;
+    right: 16px;
+    bottom: 86px;
+  }
+  .password:hover {
+    cursor: pointer;
   }
 `;
 

@@ -16,6 +16,7 @@ const Register = () => {
     lastName: "",
     password: "",
     isMember: "",
+    showPassword: true,
   };
   const [values, setValues] = useState(initialState);
   const dispatch = useDispatch();
@@ -35,44 +36,10 @@ const Register = () => {
     const value = e.target.value;
     setValues({ ...values, [name]: value });
   };
-  // return (
-  //   <div>
-  //     <h1>Register Page</h1>
-  //     <form>
-  //       <input
-  //         type="email"
-  //         name="email"
-  //         value={values.email}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="text"
-  //         name="firstName"
-  //         value={values.firstName}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="text"
-  //         name="lastName"
-  //         value={values.lastName}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="password"
-  //         name="password"
-  //         value={values.password}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <button type="submit" onClick={onSubmit}>
-  //         Register
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
+
+  const setShowPassword = () => {
+    setValues({ ...values, ["showPassword"]: !values.showPassword });
+  };
 
   return (
     <Container>
@@ -107,12 +74,14 @@ const Register = () => {
               />
               <Form
                 labelText="Password"
-                type="password"
+                type={values.showPassword ? "text" : "password"}
                 _name="password"
                 placeholder="Password"
                 handleChange={handleChange}
                 value={values.password}
                 diff={true}
+                showPassword={values.showPassword}
+                setShowPassword={setShowPassword}
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>
                 Create Account
