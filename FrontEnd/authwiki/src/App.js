@@ -1,11 +1,12 @@
 import { Home, Register, Login, Error } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import NavBar from "./components/NavBar";
-import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
+    <Hero />
+    <GetSupport />
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Home />}></Route>
