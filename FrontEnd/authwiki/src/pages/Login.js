@@ -57,7 +57,7 @@ const Login = () => {
                 _name="password"
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>
-                Login
+                Log In
               </button>
             </form>
             <div className="cta-section">
@@ -70,11 +70,11 @@ const Login = () => {
               <div className="socials">
                 <a className="social-login" href="https://www.google.com/">
                   <Google />
-                  Sign up with Google
+                  Login with Google
                 </a>
                 <a className="social-login" href="https://www.google.com/">
                   <Github />
-                  Sign up with Github
+                  Login with Github
                 </a>
               </div>
             </div>
