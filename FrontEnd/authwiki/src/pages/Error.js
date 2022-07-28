@@ -11,9 +11,9 @@ const Error = () => {
         </div>
         <h2>Oops! </h2>
         <h4>It seems something went wrong.</h4>
-        <button type="button" className="main-btn">
-          <Link to="/">Return to homepage</Link>
-        </button>
+        <Link to="/" className="main-btn">
+          Return to homepage
+        </Link>
       </div>
     </ErrorContainer>
   );
