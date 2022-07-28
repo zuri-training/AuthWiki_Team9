@@ -16,6 +16,7 @@ const Login = () => {
   };
 
   const dispatch = useDispatch();
+  const { user, isLoading } = useSelector((state) => state.user);
 
   const [values, setValues] = useState(initialState);
   const handleChange = (e) => {
@@ -56,8 +57,13 @@ const Login = () => {
                 value={values.password}
                 _name="password"
               />
-              <button type="submit" className="submit-btn" onClick={onSubmit}>
-                Log In
+              <button
+                type="submit"
+                className="submit-btn"
+                onClick={onSubmit}
+                disabled={isLoading}
+              >
+                {isLoading ? "Loading" : "Log In"}
               </button>
             </form>
             <div className="cta-section">
