@@ -11,8 +11,8 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="login" element={<Login />}></Route>
           <Route path="register" element={<Register />}></Route>
+          <Route path="*" element={<Error />}></Route>
         </Route>
-        <Route path="*" element={<Error />}></Route>
       </Routes>
       <ToastContainer style={{ fontSize: "2rem" }} />
     </BrowserRouter>
