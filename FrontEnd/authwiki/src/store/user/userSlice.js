@@ -1,15 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import customFetch from "../../utils/axios";
+import {
+  getUserFromLocalStorage,
+  addUserToLocalStorage,
+} from "../../utils/localStorage";
 import { toast } from "react-toastify";
+
 const initialState = {
   isLoading: false,
-  user: null,
+  user: getUserFromLocalStorage(),
 };
 
 export const registerUser = createAsyncThunk(
   "user/register",
   async (user, thunkAPI) => {
     try {
+      console.log(user);
       const response = await customFetch.post("/user/register", user);
       return response.data;
     } catch (error) {
@@ -24,7 +30,6 @@ export const loginUser = createAsyncThunk(
     try {
       console.log(user);
       const response = await customFetch.post("/user/login", user);
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue("Bad credentials");
@@ -40,21 +45,25 @@ const userSlice = createSlice({
       state.isLoading = true;
     },
     [registerUser.fulfilled]: (state) => {
-      state.isLoading = true;
+      state.isLoading = false;
       toast.success("Account created Successfully ");
     },
-    [registerUser.rejected]: (state, { payload }) => {
-      console.log(payload);
-      toast.error(payload["email"][0]);
-      toast.error(payload["password"][0]);
+    [registerUser.rejected]: (state) => {
+      state.isLoading = false;
+      toast.error("Your info are invalid");
+      toast.error("Your email must be unique");
     },
     [loginUser.pending]: (state) => {
       state.isLoading = true;
     },
-    [loginUser.fulfilled]: (state) => {
-      //   toast.success("login Successfully");
+    [loginUser.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.user = payload;
+      addUserToLocalStorage(payload);
+      toast.success("Login Successful");
     },
     [loginUser.rejected]: (state, { payload }) => {
+      state.isLoading = false;
       toast.error(payload);
     },
   },

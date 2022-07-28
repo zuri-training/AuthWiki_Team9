@@ -16,3 +16,15 @@ class AuthLibrary(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class Reaction(models.Model):
+    
+    upvote = models.IntegerField(default=0)
+    down_vote = models.IntegerField(default=0)
+    no_of_vote = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{str(self.upvote)}"
+
+

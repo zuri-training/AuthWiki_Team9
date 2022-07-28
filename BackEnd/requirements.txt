@@ -2,4 +2,3 @@ Django
 djangorestframework
 drf-spectacular
 django-cors-headers
-requirements.txt
