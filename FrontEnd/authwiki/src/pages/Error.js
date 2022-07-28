@@ -7,13 +7,12 @@ const Error = () => {
       <div className="wrapper">
         <div>
           <Pana />
-          {/* <img src="pana/pana.svg" alt="404"> */}
         </div>
         <h2>Oops! </h2>
-        <h4>It seems something went wrong.</h4>
-        <button type="button" className="main-btn">
-          <Link to="/">Return to homepage</Link>
-        </button>
+        <h4>It seems something went wrong</h4>
+        <Link to="/" className="main-btn">
+          Return to Homepage
+        </Link>
       </div>
     </ErrorContainer>
   );
