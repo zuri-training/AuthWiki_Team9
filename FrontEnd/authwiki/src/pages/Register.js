@@ -74,7 +74,7 @@ const Register = () => {
               />
               <Form
                 labelText="Password"
-                type={values.showPassword ? "text" : "password"}
+                type={values.showPassword ? "password" : "text"}
                 _name="password"
                 placeholder="Password"
                 handleChange={handleChange}
