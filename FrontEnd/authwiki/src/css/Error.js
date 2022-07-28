@@ -4,7 +4,7 @@ const ErrorContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 100px 0;
   .wrapper {
     text-align: center;
   }
