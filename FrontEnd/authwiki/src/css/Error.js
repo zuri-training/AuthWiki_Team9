@@ -35,5 +35,4 @@ const ErrorContainer = styled.main`
     flex-grow: 0;
   }
 `;
-
 export default ErrorContainer;
