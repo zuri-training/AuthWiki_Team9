@@ -4,6 +4,8 @@ from django.contrib.auth import get_user_model
 
 # Create your models here.
 
+
+
 class AuthLibrary(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -27,4 +29,19 @@ class Reaction(models.Model):
     def __str__(self):
         return f"{str(self.upvote)}"
 
+class Comment(models.Model):
+    author_Name = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    auth_package= models.ForeignKey(AuthLibrary, on_delete=models.CASCADE, related_name='comment')
+    comment_body = models.TextField( blank=True, null=True)
+    date_created = models.DateTimeField(blank=True, null=True, auto_now_add=True)
 
+    def __str__(self):
+        return f"{str(self.author_Name)}"
+
+class Category(models.Model):
+    name = models.CharField(max_length=255, null=True)
+    slug = models.SlugField(null=True)
+    description = models.CharField(max_length=500, null=True,blank=True, verbose_name='Description')
+
+    def __str__(self):
+        return str(self.name)
