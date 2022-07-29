@@ -1,0 +1,44 @@
+.work-with{
+    text-align: center;
+    color: #fdfef8;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+
+.work-with h3{
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+}
+
+.work-support-framework{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.framework{
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.framework:hover{
+    color: #800080;
+}
+
+@media only screen and (max-width: 1024px){
+    .work-with{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+    }
+    .work-support-framework{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}

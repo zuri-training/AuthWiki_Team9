@@ -1,0 +1,70 @@
+
+.hero{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 10em;
+}
+
+.copy{color: #800080;}
+.paste,.test{color: #fdfef8;}
+
+.title-wrapper{
+    border: 2px solid #03274b;
+    padding: 2em 8em;
+}
+
+.title-wrapper h2{
+    margin: 0;
+}
+
+.docs-btn{
+    background-color: #fdfef8;
+    color: #04172a;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+
+.docs-btn:hover{
+    background: transparent;
+    color: #fdfef8;
+    transition: all 0.5s ease-out;
+    border: 1px solid #fdfef8;
+}
+
+.para-container{
+    margin: 3em 0;
+    width: 75%;
+    text-align: center;
+}
+.desc{
+    color: #fdfef8;
+    font-size: 2em;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.desc a{
+    color: #800080;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .title{
+        font-size: 8em;
+    }
+    .para-container{
+        width: 95%;
+        text-align: center;
+    }
+}
