@@ -13,6 +13,8 @@ class CodeSnippet(models.Model):
         return f"{self.title} || {str(self.id)}"
 
 
+
+
 class AuthLibrary(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -34,3 +36,20 @@ class Reaction(models.Model):
 
     def __str__(self):
         return f"{str(self.upvote)}"
+
+
+class Comment(models.Model):
+    author_Name = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    comment_body = models.TextField( blank=True, null=True)
+    date_created = models.DateTimeField(blank=True, null=True, auto_now_add=True)
+
+    def __str__(self):
+        return f"{str(self.author_Name)}"
+
+class Category(models.Model):
+    name = models.CharField(max_length=255, null=True)
+    slug = models.SlugField(null=True)
+    description = models.CharField(max_length=500, null=True,blank=True, verbose_name='Description')
+
+    def __str__(self):
+        return str(self.name)
