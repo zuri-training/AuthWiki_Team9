@@ -20,12 +20,13 @@ class CommentSerializer(serializers.ModelSerializer):
 class CodeSnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = CodeSnippet
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ('auth_library',)
 
 
 class AuthLibrarySerializer(serializers.ModelSerializer):
     comment = CommentSerializer(many=True, read_only=True)
-    code_snippet = CommentSerializer(many=True, read_only=True)
+    code_snippet = CodeSnippetSerializer(many=True, read_only=True)
 
     class Meta:
         model = AuthLibrary
