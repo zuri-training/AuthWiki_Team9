@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <Container>
       <section className="section">
-        <h1 className="display-text">Create an Account with AuthIt</h1>
+        <h1 className="display-text">Create an Account with AuthWiki</h1>
         <div className="login-container">
           <div className="login-item">
             <form>

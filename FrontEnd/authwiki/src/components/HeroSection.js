@@ -23,8 +23,8 @@ const HeroSection = () => {
       </a>
       <div className="para-container">
         <p className="desc">
-          <a href="#">Authlt</a> combines the best developer experience with an
-          obsessive focus on end-user performance.{" "}
+          <a href="#">AuthWiki</a> combines the best developer experience with
+          an obsessive focus on end-user performance.{" "}
           <span>
             Our paltform enables frontend teams to do their best work.
           </span>

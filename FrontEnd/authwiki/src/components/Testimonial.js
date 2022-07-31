@@ -37,7 +37,7 @@ const Testimonial = () => {
             </div>
             <div className="testimonial_content">
               <p>
-                Will @AuthIt please just right now setup <br></br>
+                @AuthWiki please just right now setup <br></br>
                 An annual pass type thing so I can just <br></br>
                 Be apart of every damn thing they offer?
               </p>
@@ -68,7 +68,7 @@ const Testimonial = () => {
             </div>
             <div className="testimonial_content">
               <p>
-                Will @AuthIt please just right now setup <br></br>
+                @AuthWiki please just right now setup <br></br>
                 An annual pass type thing so I can just <br></br>
                 Be apart of every damn thing they offer?
               </p>
@@ -99,7 +99,7 @@ const Testimonial = () => {
             </div>
             <div className="testimonial_content">
               <p>
-                Will @AuthIt please just right now setup <br></br>
+                @AuthWiki please just right now setup <br></br>
                 An annual pass type thing so I can just <br></br>
                 Be apart of every damn thing they offer?
               </p>
