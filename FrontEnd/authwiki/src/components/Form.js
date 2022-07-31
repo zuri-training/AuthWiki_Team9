@@ -72,19 +72,6 @@ const Terms = () => {
       <span className="condition">
         *Password should be at least 8 character
       </span>
-      <p>
-        <input type="checkbox" className="checkbox" />
-        <span>
-          By signing up you agree to our {"  "}
-          <a href="me.com" className="sign-up">
-            End User License Agreement
-          </a>{" "}
-          and our {"  "}
-          <a href="me.com" className="sign-up">
-            Privacy Policy
-          </a>
-        </span>
-      </p>
     </div>
   );
 };

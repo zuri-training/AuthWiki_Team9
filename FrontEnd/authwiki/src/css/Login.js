@@ -98,13 +98,10 @@ const Container = styled.main`
     margin-bottom: 0.8rem;
     display: block;
   }
-  .checkbox {
-    margin-right: 1rem;
-  }
   .password {
     position: absolute;
     right: 16px;
-    bottom: 86px;
+    bottom: 52px;
   }
   .password:hover {
     cursor: pointer;
