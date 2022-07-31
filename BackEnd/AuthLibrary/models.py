@@ -8,7 +8,7 @@ class CodeSnippet(models.Model):
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    auth_library = models.ForeignKey('CodeSnippet',
+    auth_library = models.ForeignKey('AuthLibrary',
                                      on_delete=models.CASCADE,
                                      related_name='code_snippet')
 
