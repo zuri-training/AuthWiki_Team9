@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <Container>
       <section className="section">
-        <h1 className="display-text">Log In to your AuthIt Account</h1>
+        <h1 className="display-text">Log In to your AuthWiki Account</h1>
         <div className="login-container">
           <div className="login-item">
             <form>
