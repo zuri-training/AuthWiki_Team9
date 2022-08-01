@@ -27,6 +27,7 @@ class CodeSnippetSerializer(serializers.ModelSerializer):
 class AuthLibrarySerializer(serializers.ModelSerializer):
     comment = CommentSerializer(many=True, read_only=True)
     code_snippet = CodeSnippetSerializer(many=True, read_only=True)
+    created_by = serializers.StringRelatedField()
 
     class Meta:
         model = AuthLibrary

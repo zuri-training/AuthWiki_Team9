@@ -12,6 +12,10 @@ class AuthLibraryView(viewsets.ModelViewSet):
     serializer_class = AuthLibrarySerializer
     queryset = AuthLibrary.objects.all()
 
+    def perform_create(self, serializer):
+        serializer.save(**self.request.data,
+                        created_by=self.request.user)
+
 
 class CodeSnippetView(viewsets.ModelViewSet):
     serializer_class = CodeSnippetSerializer
