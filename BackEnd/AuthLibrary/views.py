@@ -4,6 +4,8 @@ from .serializers import (AuthLibrarySerializer,
                           CodeSnippetSerializer,
                           CommentSerializer)
 from rest_framework import viewsets, generics
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 # Create your views here.
@@ -11,6 +13,14 @@ from rest_framework import viewsets, generics
 class AuthLibraryView(viewsets.ModelViewSet):
     serializer_class = AuthLibrarySerializer
     queryset = AuthLibrary.objects.all()
+    authentication_classes = [TokenAuthentication]
+
+    def get_permissions(self):
+        if self.action == 'list':
+            self.permission_classes = [IsAuthenticated]
+        else:
+            self.permission_classes = [IsAdminUser]
+        return super(self.__class__, self).get_permissions()
 
     def perform_create(self, serializer):
         serializer.save(**self.request.data,
@@ -20,10 +30,13 @@ class AuthLibraryView(viewsets.ModelViewSet):
 class CodeSnippetView(viewsets.ModelViewSet):
     serializer_class = CodeSnippetSerializer
     queryset = CodeSnippet.objects.all()
+    authentication_classes = [TokenAuthentication]
 
 
 class CommentAPIView(generics.CreateAPIView):
     serializer_class = CommentSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get_object(self):
         return Comment.objects.all()
@@ -39,6 +52,8 @@ class CommentAPIView(generics.CreateAPIView):
 
 class CodeSnippetAPIView(generics.CreateAPIView):
     serializer_class = CodeSnippetSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = []
 
     def get_object(self):
         return CodeSnippet.objects.all()
