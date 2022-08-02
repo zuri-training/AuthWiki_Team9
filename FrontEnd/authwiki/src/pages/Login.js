@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../store/user/userSlice";
 import Google from "../icons/Google";
 import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import Container from "../css/Login";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Form from "../components/Form";
 import { toast } from "react-toastify";
 
@@ -14,7 +14,7 @@ const Login = () => {
     email: "",
     password: "",
   };
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading } = useSelector((state) => state.user);
 
@@ -34,6 +34,13 @@ const Login = () => {
     dispatch(loginUser({ email, password }));
     return;
   };
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/auth/dashboard");
+      }, 3000);
+    }
+  }, [user, navigate]);
   return (
     <Container>
       <section className="section">
