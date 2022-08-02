@@ -21,13 +21,14 @@ function App() {
           <Route path="register" element={<Register />}></Route>
         </Route>
         <Route
-          path="/auth"
+          path="/"
           element={
             <ProtectedRoute>
               <NavBar />
             </ProtectedRoute>
           }
         >
+          <Route index element={<Home />}></Route>
           <Route path="dashboard" element={<Dashboard />}></Route>
           <Route path="profile" element={<Profile />}></Route>
         </Route>
