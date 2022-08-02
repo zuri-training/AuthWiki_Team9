@@ -40,22 +40,14 @@ class AuthLibrary(models.Model):
         return f"{self.name}"
 
 
-class Reaction(models.Model):
-    upvote = models.IntegerField(default=0)
-    down_vote = models.IntegerField(default=0)
-
-    def __str__(self):
-        return f"{str(self.upvote)}"
-
-
 class Comment(models.Model):
     author_name = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, blank=True)
     comment_body = models.TextField(blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     auth_library = models.ForeignKey(AuthLibrary, on_delete=models.CASCADE,
                                      related_name='comment')
-
-    # reaction = models.OneToOneField(Reaction, on_delete=models.CASCADE)
+    upvote = models.IntegerField(default=0)
+    down_vote = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{str(self.author_name)}"
