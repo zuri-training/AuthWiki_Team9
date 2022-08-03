@@ -35,6 +35,7 @@ class AuthLibrary(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     image = models.ImageField(null=True, upload_to=auth_lib_image_file_path)
+    language = models.CharField(max_length=10, default='python')
 
     def __str__(self):
         return f"{self.name}"
@@ -47,17 +48,8 @@ class Comment(models.Model):
     auth_library = models.ForeignKey(AuthLibrary, on_delete=models.CASCADE,
                                      related_name='comment')
 
-
     def __str__(self):
         return f"{str(self.author_name)}"
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=255, null=True)
-    description = models.CharField(max_length=255, null=True, blank=True, verbose_name='Description')
-
-    def __str__(self):
-        return str(self.name)
 
 
 # UpVotes
