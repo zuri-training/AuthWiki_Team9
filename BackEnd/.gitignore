@@ -39,6 +39,9 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
 htmlcov/
 .tox/
 .nox/

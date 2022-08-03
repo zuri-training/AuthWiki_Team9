@@ -1,11 +1,28 @@
-from pyexpat import model
 from rest_framework import serializers
 from .models import (Comment, AuthLibrary,
-                     CodeSnippet)
+                     CodeSnippet, DownVote, UpVote)
+
+
+class UpVoteSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()
+
+    class Meta:
+        model = UpVote
+        exclude = ('comment',)
+
+
+class DownVoteSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()
+
+    class Meta:
+        model = DownVote
+        exclude = ('comment',)
 
 
 class CommentSerializer(serializers.ModelSerializer):
     author_name = serializers.StringRelatedField()
+    upvote_user = UpVoteSerializer(many=True, read_only=True)
+    downvote_user = DownVoteSerializer(many=True, read_only=True)
 
     class Meta:
         model = Comment
@@ -20,7 +37,6 @@ class CommentSerializer(serializers.ModelSerializer):
 class CodeSnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = CodeSnippet
-        # fields = '__all__'
         exclude = ('auth_library',)
 
 

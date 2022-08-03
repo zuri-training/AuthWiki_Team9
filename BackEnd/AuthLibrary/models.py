@@ -46,8 +46,7 @@ class Comment(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     auth_library = models.ForeignKey(AuthLibrary, on_delete=models.CASCADE,
                                      related_name='comment')
-    upvote = models.IntegerField(default=0)
-    down_vote = models.IntegerField(default=0)
+
 
     def __str__(self):
         return f"{str(self.author_name)}"
@@ -59,3 +58,23 @@ class Category(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+# UpVotes
+class UpVote(models.Model):
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE,
+                                related_name='upvote_user')
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.user)
+
+
+# DownVotes
+class DownVote(models.Model):
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE,
+                                related_name='downvote_user')
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, )
+
+    def __str__(self):
+        return str(self.user)
