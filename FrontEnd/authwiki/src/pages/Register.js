@@ -15,6 +15,7 @@ const Register = () => {
     firstName: "",
     lastName: "",
     password: "",
+    username: "",
     isMember: "",
     showPassword: true,
   };
@@ -23,12 +24,12 @@ const Register = () => {
   const { user, isLoading } = useSelector((store) => store.user);
   const onSubmit = (e) => {
     e.preventDefault();
-    const { email, firstName, lastName, password } = values;
-    if (!email || !firstName || !lastName || !password) {
+    const { email, firstName, lastName, password, username } = values;
+    if (!email || !firstName || !lastName || !password || !username) {
       toast.error("Please fill out all the fields");
       return;
     }
-    dispatch(registerUser({ email, firstName, lastName, password }));
+    dispatch(registerUser({ email, firstName, lastName, password, username }));
     return;
   };
   const handleChange = (e) => {
@@ -38,7 +39,7 @@ const Register = () => {
   };
 
   const setShowPassword = () => {
-    setValues({ ...values, ["showPassword"]: !values.showPassword });
+    setValues({ ...values, showPassword: !values.showPassword });
   };
 
   return (
@@ -71,6 +72,14 @@ const Register = () => {
                 placeholder="example@example.com"
                 handleChange={handleChange}
                 value={values.email}
+              />
+              <Form
+                labelText="User Name"
+                type="text"
+                _name="username"
+                placeholder="username"
+                handleChange={handleChange}
+                value={values.username}
               />
               <Form
                 labelText="Password"

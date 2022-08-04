@@ -46,10 +46,17 @@ const userSlice = createSlice({
       state.isLoading = false;
       toast.success("Account created Successfully ");
     },
-    [registerUser.rejected]: (state) => {
+    [registerUser.rejected]: (state, { payload }) => {
       state.isLoading = false;
-      toast.error("Your info are invalid");
-      toast.error("Your email must be unique");
+      for (const key in payload) {
+        if (key === "password") {
+          toast.error("Ensure the password has at least 6 characters.");
+        } else {
+          toast.error(
+            payload[key][0].replace(/^./, payload[key][0][0].toUpperCase())
+          );
+        }
+      }
     },
     [loginUser.pending]: (state) => {
       state.isLoading = true;
