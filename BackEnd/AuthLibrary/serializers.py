@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import (Comment, AuthLibrary,
-                     CodeSnippet, DownVote, UpVote)
+
+from .models import AuthLibrary, CodeSnippet, Comment, DownVote, UpVote
 
 
 class UpVoteSerializer(serializers.ModelSerializer):
@@ -8,7 +8,7 @@ class UpVoteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UpVote
-        exclude = ('comment',)
+        exclude = ("comment",)
 
 
 class DownVoteSerializer(serializers.ModelSerializer):
@@ -16,7 +16,7 @@ class DownVoteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DownVote
-        exclude = ('comment',)
+        exclude = ("comment",)
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -26,18 +26,14 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        exclude = ('auth_library',)
-        extra_kwargs = {
-            'author_name': {
-                'required': False
-            }
-        }
+        exclude = ("auth_library",)
+        extra_kwargs = {"author_name": {"required": False}}
 
 
 class CodeSnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = CodeSnippet
-        exclude = ('auth_library',)
+        exclude = ("auth_library",)
 
 
 class AuthLibrarySerializer(serializers.ModelSerializer):
@@ -47,4 +43,4 @@ class AuthLibrarySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AuthLibrary
-        fields = '__all__'
+        fields = "__all__"

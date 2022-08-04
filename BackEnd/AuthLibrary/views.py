@@ -1,17 +1,19 @@
-from .models import (Comment, AuthLibrary,
-                     CodeSnippet, DownVote, UpVote)
-from .serializers import (AuthLibrarySerializer,
-                          CodeSnippetSerializer,
-                          CommentSerializer,
-                          UpVoteSerializer,
-                          DownVoteSerializer)
-from rest_framework import viewsets, generics
+from rest_framework import generics, viewsets
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.exceptions import ValidationError
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
 
+from .models import AuthLibrary, CodeSnippet, Comment, DownVote, UpVote
+from .serializers import (
+    AuthLibrarySerializer,
+    CodeSnippetSerializer,
+    CommentSerializer,
+    DownVoteSerializer,
+    UpVoteSerializer,
+)
 
 # Create your views here.
+
 
 class AuthLibraryView(viewsets.ModelViewSet):
     serializer_class = AuthLibrarySerializer
@@ -19,15 +21,14 @@ class AuthLibraryView(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication]
 
     def get_permissions(self):
-        if self.action == 'list':
+        if self.action == "list":
             self.permission_classes = [IsAuthenticated]
         else:
             self.permission_classes = [IsAdminUser]
         return super(self.__class__, self).get_permissions()
 
     def perform_create(self, serializer):
-        serializer.save(**self.request.data,
-                        created_by=self.request.user)
+        serializer.save(**self.request.data, created_by=self.request.user)
 
 
 class CodeSnippetView(viewsets.ModelViewSet):
@@ -52,7 +53,10 @@ class DownVoteAPIView(generics.CreateAPIView):
             raise ValidationError("You have already downvote this comment")
         if upvote_queryset.exists():
             upvote_queryset.delete()
-        serializer.save(comment=comment, user=review_user, )
+        serializer.save(
+            comment=comment,
+            user=review_user,
+        )
 
 
 class UpVoteAPIView(generics.CreateAPIView):
@@ -71,7 +75,10 @@ class UpVoteAPIView(generics.CreateAPIView):
             raise ValidationError("You have already upvote this comment")
         if downvote_queryset.exists():
             downvote_queryset.delete()
-        serializer.save(comment=comment, user=review_user, )
+        serializer.save(
+            comment=comment,
+            user=review_user,
+        )
 
 
 class CommentAPIView(generics.ListCreateAPIView):
@@ -84,11 +91,10 @@ class CommentAPIView(generics.ListCreateAPIView):
         return Comment.objects.all()
 
     def perform_create(self, serializer):
-        pk = self.kwargs['pk']
+        pk = self.kwargs["pk"]
         auth_lib = AuthLibrary.objects.get(pk=pk)
         user = self.request.user
-        serializer.save(**self.request.data,
-                        author_name=user, auth_library=auth_lib)
+        serializer.save(**self.request.data, author_name=user, auth_library=auth_lib)
 
 
 class CodeSnippetAPIView(generics.CreateAPIView):
@@ -100,7 +106,6 @@ class CodeSnippetAPIView(generics.CreateAPIView):
         return CodeSnippet.objects.all()
 
     def perform_create(self, serializer):
-        pk = self.kwargs['pk']
+        pk = self.kwargs["pk"]
         auth_lib = AuthLibrary.objects.get(pk=pk)
-        serializer.save(**self.request.data,
-                        auth_library=auth_lib)
+        serializer.save(**self.request.data, auth_library=auth_lib)
