@@ -5,10 +5,8 @@ const ProtectedRoute = ({ children }) => {
   const { user } = useSelector((store) => store.user);
 
   if (!user) {
-    console.log(user);
     return <Navigate to="/" />;
   }
-  console.log(user);
   return children;
 };
 
