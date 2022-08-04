@@ -15,7 +15,6 @@ export const registerUser = createAsyncThunk(
   "user/register",
   async (user, thunkAPI) => {
     try {
-      console.log(user);
       const response = await customFetch.post("/user/register", user);
       return response.data;
     } catch (error) {
@@ -28,7 +27,6 @@ export const loginUser = createAsyncThunk(
   "user/login",
   async (user, thunkAPI) => {
     try {
-      console.log(user);
       const response = await customFetch.post("/user/login", user);
       return response.data;
     } catch (error) {
