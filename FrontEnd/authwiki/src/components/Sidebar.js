@@ -1,6 +1,6 @@
 import React from "react";
 import { SidebarCSS } from "../css/SidebarCSS";
-import akar from "../icons/akar.png";
+import akar from "../images/icons/akar.png";
 import Ellipse_17 from "../images/icons/Ellipse_17.png";
 import Logo from "../images/icons/Logo.png";
 import clarity_book from "../images/icons/clarity_book.png";
