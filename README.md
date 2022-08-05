@@ -1,5 +1,12 @@
 #AuthWiki
 
+## Resource
+
+- #### [Figma](https://www.figma.com/file/ZiuCDL7seXKfkdzfCHXtkG/Auth_Wiki?node-id=24%3A4)
+- #### [Database Schema](https://www.figma.com/file/PM9TfN8K3UakzbYPlEBG1g/AUTH-WIKI?node-id=0%3A1)
+- #### [Presentation](https://vimeo.com/735146052)
+- #### [Live Link](https://authwiki.netlify.app/)
+
 ### **_Fork and Clone Repository_**
 
 1. Visit the Repository to the Project on Github Website: https://github.com/zuri-training/AuthWiki_Team9

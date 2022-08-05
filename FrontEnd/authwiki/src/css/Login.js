@@ -1,30 +1,16 @@
 import styled from "styled-components";
 
 const Container = styled.main`
-  /* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
-  /* html {
-    font-size: 62.5%;
-  } */
-  /* .main {
-    color: #fdfef8;
-    font-family: "Lato", sans-serif;
-    background-color: #04172a;
-  } */
-  /* .section {
-    max-width: 115rem;
-    margin: 0 auto;
-  } */
+  color: #d3d4cf;
+  .section {
+    margin: 6.5rem 0;
+  }
   .display-text {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 3.5rem;
-    letter-spacing: 0.5rem;
     font-weight: 700;
-    color: #d3d4cf;
-    text-align: center;
+    line-height: 9.5rem;
+    word-spacing: 8px;
   }
   .login-container {
     display: flex;
@@ -33,19 +19,19 @@ const Container = styled.main`
   form {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    /* justify-content: center; */
+    gap: 3rem;
   }
   .login-item {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
   }
   .input-item {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
   }
   .login-item-svg {
     padding: 4rem;
@@ -55,7 +41,6 @@ const Container = styled.main`
     font-size: 1.8rem;
   }
   .input-box {
-    /* width: 100%; */
     padding: 1.4rem;
     font-family: inherit;
     color: #343a40;
@@ -81,7 +66,7 @@ const Container = styled.main`
   .cta {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .sign-up:link,
   .sign-up:visited {
@@ -90,13 +75,13 @@ const Container = styled.main`
   }
   .socials {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .social-login:link,
   .social-login:visited {
     display: flex;
     font-size: 2rem;
-    color: #fdfef8;
+    color: #d3d4cf;
     border: 1px #a9a9a5 solid;
     border-radius: 0.4rem;
     text-decoration: none;
@@ -113,8 +98,13 @@ const Container = styled.main`
     margin-bottom: 0.8rem;
     display: block;
   }
-  .checkbox {
-    margin-right: 1rem;
+  .password {
+    position: absolute;
+    right: 16px;
+    bottom: 52px;
+  }
+  .password:hover {
+    cursor: pointer;
   }
 `;
 

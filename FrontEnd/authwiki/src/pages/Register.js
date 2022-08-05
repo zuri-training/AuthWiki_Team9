@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import Container from "../css/Login";
 import Form from "../components/Form";
-import Google from "../icons/Google";
-import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -15,19 +13,21 @@ const Register = () => {
     firstName: "",
     lastName: "",
     password: "",
+    username: "",
     isMember: "",
+    showPassword: true,
   };
   const [values, setValues] = useState(initialState);
   const dispatch = useDispatch();
   const { user, isLoading } = useSelector((store) => store.user);
   const onSubmit = (e) => {
     e.preventDefault();
-    const { email, firstName, lastName, password } = values;
-    if (!email || !firstName || !lastName || !password) {
+    const { email, firstName, lastName, password, username } = values;
+    if (!email || !firstName || !lastName || !password || !username) {
       toast.error("Please fill out all the fields");
       return;
     }
-    dispatch(registerUser({ email, firstName, lastName, password }));
+    dispatch(registerUser({ email, firstName, lastName, password, username }));
     return;
   };
   const handleChange = (e) => {
@@ -35,49 +35,15 @@ const Register = () => {
     const value = e.target.value;
     setValues({ ...values, [name]: value });
   };
-  // return (
-  //   <div>
-  //     <h1>Register Page</h1>
-  //     <form>
-  //       <input
-  //         type="email"
-  //         name="email"
-  //         value={values.email}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="text"
-  //         name="firstName"
-  //         value={values.firstName}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="text"
-  //         name="lastName"
-  //         value={values.lastName}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <input
-  //         type="password"
-  //         name="password"
-  //         value={values.password}
-  //         onChange={onChange}
-  //       />
-  //       <br />
-  //       <button type="submit" onClick={onSubmit}>
-  //         Register
-  //       </button>
-  //     </form>
-  //   </div>
-  // );
+
+  const setShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
 
   return (
     <Container>
       <section className="section">
-        <h1 className="display-text">Create an Account with AuthIt</h1>
+        <h1 className="display-text">Create an Account with AuthWiki</h1>
         <div className="login-container">
           <div className="login-item">
             <form>
@@ -106,13 +72,23 @@ const Register = () => {
                 value={values.email}
               />
               <Form
+                labelText="User Name"
+                type="text"
+                _name="username"
+                placeholder="username"
+                handleChange={handleChange}
+                value={values.username}
+              />
+              <Form
                 labelText="Password"
-                type="password"
+                type={values.showPassword ? "password" : "text"}
                 _name="password"
                 placeholder="Password"
                 handleChange={handleChange}
                 value={values.password}
                 diff={true}
+                showPassword={values.showPassword}
+                setShowPassword={setShowPassword}
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>
                 Create Account
@@ -125,16 +101,6 @@ const Register = () => {
                   Login
                 </Link>
               </p>
-              <div className="socials">
-                <a className="social-login" href="https://www.google.com/">
-                  <Google />
-                  Sign up with Google
-                </a>
-                <a className="social-login" href="https://www.google.com/">
-                  <Github />
-                  Sign up with Github
-                </a>
-              </div>
             </div>
           </div>
           <div className="login-item login-item-svg">
