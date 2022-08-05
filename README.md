@@ -1,7 +1,9 @@
 #AuthWiki
 
-## Resource
 
+<img width="1438" alt="Screenshot 2022-08-05 at 3 22 26 PM" src="https://user-images.githubusercontent.com/48237269/183097094-95a875b8-ed0f-4b9f-a6be-82f92ad7e145.png">
+
+## Resource
 - #### [Figma](https://www.figma.com/file/ZiuCDL7seXKfkdzfCHXtkG/Auth_Wiki?node-id=24%3A4)
 - #### [Database Schema](https://www.figma.com/file/PM9TfN8K3UakzbYPlEBG1g/AUTH-WIKI?node-id=0%3A1)
 - #### [Presentation](https://vimeo.com/735146052)
