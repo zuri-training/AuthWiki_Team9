@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import Container from "../css/Login";
 import Form from "../components/Form";
-import Google from "../icons/Google";
-import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
