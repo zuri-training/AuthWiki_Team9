@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getAllAuthLib } from "../store/authlib/authlibSlice";
 import Loader from "../components/Loader";
+import SideBar from "../components/SideBar";
 const Dashboard = () => {
   const { isLoading, authlib } = useSelector((state) => state.authlib);
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Dashboard = () => {
   if (isLoading) {
     return <Loader />;
   }
-  if (authlib.length > 0) {
+  if (authlib.length > 2000) {
     return (
       <ul>
         {authlib.map((item) => {
@@ -31,7 +32,7 @@ const Dashboard = () => {
       </ul>
     );
   }
-  return <div>Dashboard</div>;
+  return <SideBar />;
 };
 
 export default Dashboard;

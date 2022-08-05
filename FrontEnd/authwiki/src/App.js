@@ -7,10 +7,12 @@ import {
   Profile,
   ProtectedRoute,
   AuthLib,
+  StarItem,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
 import "./App.css";
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <NavBar />
+              <SideBar />
             </ProtectedRoute>
           }
         >
@@ -33,6 +35,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />}></Route>
           <Route path="authlib/:authlibId" element={<AuthLib />}></Route>
           <Route path="profile" element={<Profile />}></Route>
+          <Route path="star" element={<StarItem />}></Route>
         </Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
