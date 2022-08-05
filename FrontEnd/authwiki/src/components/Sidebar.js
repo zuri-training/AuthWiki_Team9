@@ -1,13 +1,13 @@
 import React from "react";
 import { SidebarCSS } from "../css/SidebarCSS";
 import akar from "../icons/akar.png";
-import Ellipse_17 from "../icons/Ellipse_17.png";
-import Logo from "../icons/Logo.png";
-import clarity_book from "../icons/clarity_book.png";
-import clarity_code from "../icons/clarity_code.png";
-import fluent_broad from "../icons/fluent_broad.png";
-import fluent_people from "../icons/fluent_people.png";
-import carbon_star from "../icons/carbon_star.png";
+import Ellipse_17 from "../images/icons/Ellipse_17.png";
+import Logo from "../images/icons/Logo.png";
+import clarity_book from "../images/icons/clarity_book.png";
+import clarity_code from "../images/icons/clarity_code.png";
+import fluent_broad from "../images/icons/fluent_broad.png";
+import fluent_people from "../images/icons/fluent_people.png";
+import carbon_star from "../images/icons/carbon_star.png";
 const Sidebar = () => {
   return (
     <SidebarCSS>
