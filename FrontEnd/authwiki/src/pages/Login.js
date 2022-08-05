@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../store/user/userSlice";
-import Google from "../icons/Google";
-import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import Container from "../css/Login";
 import { Link, useNavigate } from "react-router-dom";
@@ -80,16 +78,6 @@ const Login = () => {
                   Sign Up
                 </Link>
               </p>
-              <div className="socials">
-                <a className="social-login" href="https://www.google.com/">
-                  <Google />
-                  Login with Google
-                </a>
-                <a className="social-login" href="https://www.google.com/">
-                  <Github />
-                  Login with Github
-                </a>
-              </div>
             </div>
           </div>
           <div className="login-item login-item-svg">

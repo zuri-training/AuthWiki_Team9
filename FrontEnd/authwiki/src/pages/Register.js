@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import Container from "../css/Login";
 import Form from "../components/Form";
-import Google from "../icons/Google";
-import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -103,16 +101,6 @@ const Register = () => {
                   Login
                 </Link>
               </p>
-              <div className="socials">
-                <a className="social-login" href="https://www.google.com/">
-                  <Google />
-                  Sign up with Google
-                </a>
-                <a className="social-login" href="https://www.google.com/">
-                  <Github />
-                  Sign up with Github
-                </a>
-              </div>
             </div>
           </div>
           <div className="login-item login-item-svg">
