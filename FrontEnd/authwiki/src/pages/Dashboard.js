@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getAllAuthLib } from "../store/authlib/authlibSlice";
-
+import Loader from "../components/Loader";
 const Dashboard = () => {
   const { isLoading, authlib } = useSelector((state) => state.authlib);
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const Dashboard = () => {
   }, [dispatch]);
 
   if (isLoading) {
-    return <h2>Loading</h2>;
+    return <Loader />;
   }
   if (authlib.length > 0) {
     return (
