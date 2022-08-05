@@ -38,7 +38,11 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+db.sqlite3
 # Unit test / coverage reports
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
 htmlcov/
 .tox/
 .nox/
@@ -59,7 +63,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
+user/db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:

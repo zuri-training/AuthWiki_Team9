@@ -25,7 +25,7 @@ const NavBar = () => {
                   fill="#FDFEF8"
                 />
               </svg>
-              AuthIt
+              AuthWiki
             </li>
           </ul>
           <ul>

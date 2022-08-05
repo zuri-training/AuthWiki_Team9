@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Home = () => {
-  return <div></div>;
-};
+import React from "react";
+import GettingStarted from "../components/GettingStarted";
+import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import AuthLibrary from "../components/AuthLibrary";
+import Testimonial from "../components/Testimonial";
 
-const Wrapper = styled.h1`
-  color: black;
-`;
+const Home = () => {
+  return (
+    <React.Fragment>
+      <HeroSection />
+      <GettingStarted />
+      <AuthLibrary />
+      <Testimonial />
+      <Footer />
+    </React.Fragment>
+  );
+};
 
 export default Home;

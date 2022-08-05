@@ -40,6 +40,7 @@ const NavBarCSS = styled.header`
     flex-direction: row;
   }
   .nav #signup {
+    /* Fixing of the navigation */
     color: #04172a;
     background-color: #fdfef8;
     font-size: 16px;

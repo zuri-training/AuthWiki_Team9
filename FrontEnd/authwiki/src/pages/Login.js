@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../store/user/userSlice";
-import Google from "../icons/Google";
-import Github from "../icons/Github";
 import LoginSVG from "../icons/LoginSVG";
 import Container from "../css/Login";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Form from "../components/Form";
 import { toast } from "react-toastify";
 
@@ -14,8 +12,9 @@ const Login = () => {
     email: "",
     password: "",
   };
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { user, isLoading } = useSelector((state) => state.user);
 
   const [values, setValues] = useState(initialState);
   const handleChange = (e) => {
@@ -33,10 +32,17 @@ const Login = () => {
     dispatch(loginUser({ email, password }));
     return;
   };
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 3000);
+    }
+  }, [user, navigate]);
   return (
     <Container>
       <section className="section">
-        <h1 className="display-text">Log In to your AuthIt Account</h1>
+        <h1 className="display-text">Log In to your AuthWiki Account</h1>
         <div className="login-container">
           <div className="login-item">
             <form>
@@ -56,8 +62,13 @@ const Login = () => {
                 value={values.password}
                 _name="password"
               />
-              <button type="submit" className="submit-btn" onClick={onSubmit}>
-                Login
+              <button
+                type="submit"
+                className="submit-btn"
+                onClick={onSubmit}
+                disabled={isLoading}
+              >
+                {isLoading ? "Loading" : "Log In"}
               </button>
             </form>
             <div className="cta-section">
@@ -67,16 +78,6 @@ const Login = () => {
                   Sign Up
                 </Link>
               </p>
-              <div className="socials">
-                <a className="social-login" href="https://www.google.com/">
-                  <Google />
-                  Sign up with Google
-                </a>
-                <a className="social-login" href="https://www.google.com/">
-                  <Github />
-                  Sign up with Github
-                </a>
-              </div>
             </div>
           </div>
           <div className="login-item login-item-svg">
