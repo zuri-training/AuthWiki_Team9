@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import AuthLib from "./AuthLib";
+import StarItem from "./Dashboard/StarItem";
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   Profile,
   ProtectedRoute,
   AuthLib,
+  StarItem,
 };
