@@ -17,7 +17,7 @@ const SideBar = () => {
           <form action="">
             <input name="Languages" type="search" placeholder="Search" />
             <button>
-              <img id="searchicon" src={search} />
+              <img id="searchicon" alt="Search" src={search} />
             </button>
           </form>
         </div>
@@ -26,13 +26,13 @@ const SideBar = () => {
           <Link to="#">Support</Link>
         </div>
         <div className="profile">
-          <img src={login} />
+          <img alt="Profile Display" src={login} />
           <select>
             <option value="Eva Rhed">Eva Rhed</option>
           </select>
         </div>
       </header>
-      <div class="main">
+      <div className="main">
         <section>
           <div>
             <img src={logo} alt="AuthWiki Logo" className="logo" />

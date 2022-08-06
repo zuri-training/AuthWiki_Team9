@@ -14,7 +14,7 @@ const Dashboard = () => {
   if (isLoading) {
     return <Loader />;
   }
-  if (authlib.length > 2000) {
+  if (authlib.length > 0) {
     return (
       <ul>
         {authlib.map((item) => {
@@ -32,7 +32,6 @@ const Dashboard = () => {
       </ul>
     );
   }
-  return <h2>sgsdgsadadad</h2>;
 };
 
 export default Dashboard;
