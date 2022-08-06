@@ -1,123 +1,119 @@
 import styled from "styled-components";
 
 const SideBarCSS = styled.div`
-  header {
-    /* position: fixed; */
-    /* height: 104px; */
-    /* width: 1440px; */
-  }
-
-  header div {
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #04172A; 
+    height: 100vh;
+    color:#FDFEF8;
+}
+/* Dashboard Navigation Bar */
+.main{
     display: flex;
-  }
-  .logo {
-    position: absolute;
-    width: 120px;
-    height: 68.86px;
-    left: 76px;
-    top: 18px;
-  }
-  .search form {
+    flex-direction: row;
+}
+header{
+    padding: 2em;
+    padding-left: 24em;
+    background-color: #04172A;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: fixed;
+}
+.logo{
+    display: block;
+    margin: 1.5em;
+    margin-left: 4.5em;
+}
+.search form{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 0px;
-    position: absolute;
-    left: 335px;
-    top: 27px;
-  }
-  .search input {
+}
+.search input{
     width: 466px;
     height: 50px;
-    border: 1px solid #052a4fbf;
-    background-color: #04172a;
+    border: 1px solid #052A4FBF;
+    background-color: #04172A;
     border-radius: 8px;
-    font-family: "Lato";
+    font-family: 'Lato';
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align:left;
     text-indent: 1em;
-  }
-  #searchicon {
-    position: absolute;
-    top: 12px;
-    right: 7px;
-    border: 2px solid #d3d4cf;
-  }
-  .search form button {
+}
+#searchicon{
+    position: relative;
+    top: 0px;
+    right: 2.2em;
+    border: 2px solid #D3D4CF;
+}
+.search form button{
     border: 0;
-  }
-  header .feedback {
+}
+header .feedback{
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 883px;
-    top: 28px;
     justify-content: center;
     align-items: center;
-    padding: 0px;
     gap: 4px;
-  }
-  header .feedback a {
+}
+header .feedback a{
     padding: 10px 20px;
-    border: 1px solid #04172a;
+    border: 1px solid #04172A;
+    background-color: #04172A;
     border-radius: 8px;
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
-    color: #a9a9a5;
+    color: #A9A9A5;
     text-decoration: none;
-  }
-  header .feedback a:hover {
-    border: 1px solid #052a4f;
-  }
-  .profile {
+}
+header .feedback a:hover{
+    border: 1px solid #052A4F;
+}
+.profile{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 4px;
-    position: absolute;
-    top: 28px;
-    left: 1214px;
-  }
-  .profile select {
-    background-color: #04172a;
-    border: 1px solid #04172a;
+    gap: 4px;   
+}
+.profile select{
+    background-color: #04172A;
+    border: 1px solid #04172A;
     text-align: left;
-    font-family: "Lato";
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    color: #a9a9a5;
-  }
+    color: #A9A9A5;
+}
 
-  /* Side Bar */
-  section {
-    background-color: #04172a;
-    border-right: 1px solid #052a4f;
+/* Side Bar */
+section{
+    background-color: #04172A;
+    border-right: 1px solid #052A4F;
     position: fixed;
-    width: 293px;
-    height: 100%;
-    left: 0px;
-    top: 1px;
-  }
-  .pages {
-    position: absolute;
-    width: 136px;
-    height: 236px;
-    left: 78px;
-    top: 194px;
-  }
-  .pages ul {
-    font-family: "Lato";
+    height:100%;
+ }   
+.pages{
+    padding: 5em;
+}
+.pages ul{
+    font-family: 'Lato';
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,34 +121,43 @@ const SideBarCSS = styled.div`
     padding: 0px;
     gap: 29px;
     list-style: none;
-  }
-  .pages ul li {
+}
+.pages ul li{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 6px;
-  }
-  .pages ul li a {
-    font-family: "Lato";
+}
+.pages ul li a{
+    font-family: 'Lato';
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0em;
     text-align: left;
-    color: #a9a9a5;
+    color: #A9A9A5;
     text-decoration: none;
     cursor: pointer;
-  }
-  a::after {
+}
+a::after{
     font-family: Lato;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0em;
     text-align: left;
-    color: #fdfef8;
-  }
+    color: #FDFEF8;
+}
+/* Content */
+footer{
+    margin-top: 10em;
+    margin-left: 22em;
+    margin-right: 2em;
+    margin-bottom: 4em;
+    right: 293px;
+    top: 104px;
+}
 `;
 
 export default SideBarCSS;
