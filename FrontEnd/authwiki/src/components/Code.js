@@ -8,16 +8,10 @@ export default function Code({ code, language }) {
     Prism.highlightAll();
   }, []);
   return (
-    <CodeStyle>
-      <div className="Code" style={{ backgroundColor: "red" }}>
-        <pre>
-          <code className={`language-${language}`}>{code}</code>
-        </pre>
-      </div>
-    </CodeStyle>
+    <div className="Code">
+      <pre>
+        <code className={`language-${"java"}`}>{code}</code>
+      </pre>
+    </div>
   );
 }
-
-const CodeStyle = styled.div`
-  background-color: "red";
-`;
