@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #04172A; 
+    margin: 2em;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 8em 0;
+}
+.header h1{
+    font-family: 'Lato';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFF;
+}
+.header .search form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+.header .search input {
+    width: 466px;
+    height: 50px;
+    border: 1px solid #052a4fbf;
+    background-color: #04172a;
+    border-radius: 8px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-indent: 1em;
+  }
+#searchicon {
+    position: relative;
+    top: 0px;
+    right: 32px;
+    border: 2px solid #d3d4cf;
+  }
+.header .search form button {
+    border: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+    width: 396px;
+    height: 262px;
+    background: rgba(2, 48, 106, 0.4);
+    border: 1px solid #02306A;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #FDFEF8;
+}
+.container a{
+    text-decoration: none;
+}
+section .design{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 396px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 16px;
+    background: rgba(215, 251, 230, 0.31);
+    backdrop-filter: blur(111px);
+}
+section div h1{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FDFEF8;
+}
+section .image{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+section .passport{
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    gap: 40px;
+}
+section .passport2{
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    margin-right: 0em;
+    gap: 24px;
+} 
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    padding: 0px;
+    gap: 8px;
+}
+.details p{
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.comment{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+.comment p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
