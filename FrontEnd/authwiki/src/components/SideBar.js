@@ -12,7 +12,6 @@ import search from "../images/icons/search.png";
 const SideBar = () => {
   return (
     <SideBarCSS>
-      <div>
         <header>
           <div className="search">
             <form action="">
@@ -33,9 +32,7 @@ const SideBar = () => {
             </select>
           </div>
         </header>
-        <Outlet />
-      </div>
-
+  <div class="main">
       <section>
         <div>
           <img src={logo} alt="AuthWiki Logo" className="logo" />
@@ -65,6 +62,8 @@ const SideBar = () => {
           </ul>
         </div>
       </section>
+      <footer><Outlet /><footer>
+      </div>
     </SideBarCSS>
   );
 };

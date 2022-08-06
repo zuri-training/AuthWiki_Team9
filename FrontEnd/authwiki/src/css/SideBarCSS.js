@@ -1,23 +1,37 @@
 import styled from "styled-components";
 
 const SideBarCSS = styled.div`
-  header {
-    /* position: fixed; */
-    /* height: 104px; */
-    /* width: 1440px; */
-  }
-
-  header div {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #04172A; 
+    height: 100vh;
+    color:#FDFEF8;
+}
+/* Dashboard Navigation Bar */
+.main{
+    display: flex;
+    flex-direction: row;
+}
+header {
+    position: fixed; 
+    padding: 52px 720px;
+    background-color: #04172A;
+}
+header div {
     display: flex;
   }
-  .logo {
+.logo {
     position: absolute;
     width: 120px;
     height: 68.86px;
     left: 76px;
     top: 18px;
   }
-  .search form {
+.search form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +41,7 @@ const SideBarCSS = styled.div`
     left: 335px;
     top: 27px;
   }
-  .search input {
+.search input {
     width: 466px;
     height: 50px;
     border: 1px solid #052a4fbf;
@@ -41,13 +55,13 @@ const SideBarCSS = styled.div`
     text-align: left;
     text-indent: 1em;
   }
-  #searchicon {
+#searchicon {
     position: absolute;
     top: 12px;
     right: 7px;
     border: 2px solid #d3d4cf;
   }
-  .search form button {
+.search form button {
     border: 0;
   }
   header .feedback {
@@ -60,8 +74,8 @@ const SideBarCSS = styled.div`
     align-items: center;
     padding: 0px;
     gap: 4px;
-  }
-  header .feedback a {
+    }
+header .feedback a {
     padding: 10px 20px;
     border: 1px solid #04172a;
     border-radius: 8px;
@@ -73,7 +87,7 @@ const SideBarCSS = styled.div`
     color: #a9a9a5;
     text-decoration: none;
   }
-  header .feedback a:hover {
+header .feedback a:hover {
     border: 1px solid #052a4f;
   }
   .profile {
@@ -99,8 +113,8 @@ const SideBarCSS = styled.div`
     color: #a9a9a5;
   }
 
-  /* Side Bar */
-  section {
+ /* Side Bar */
+ section {
     background-color: #04172a;
     border-right: 1px solid #052a4f;
     position: fixed;
@@ -153,6 +167,10 @@ const SideBarCSS = styled.div`
     text-align: left;
     color: #fdfef8;
   }
+/* Content - Outlier*/
+footer{
+    margin: 6em 4em 2em 22em;
+}
 `;
 
 export default SideBarCSS;
