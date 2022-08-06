@@ -1,37 +1,27 @@
 import styled from "styled-components";
 
 const SideBarCSS = styled.div`
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #04172A; 
-    height: 100vh;
-    color:#FDFEF8;
-}
-/* Dashboard Navigation Bar */
-.main{
+  /* Dashboard Navigation Bar */
+  .main {
     display: flex;
     flex-direction: row;
-}
-header {
-    position: fixed; 
+  }
+  header {
+    position: fixed;
     padding: 52px 720px;
-    background-color: #04172A;
-}
-header div {
+    background-color: #04172a;
+  }
+  header div {
     display: flex;
   }
-.logo {
+  .logo {
     position: absolute;
     width: 120px;
     height: 68.86px;
     left: 76px;
     top: 18px;
   }
-.search form {
+  .search form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -41,13 +31,12 @@ header div {
     left: 335px;
     top: 27px;
   }
-.search input {
+  .search input {
     width: 466px;
     height: 50px;
     border: 1px solid #052a4fbf;
     background-color: #04172a;
     border-radius: 8px;
-    font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -55,13 +44,13 @@ header div {
     text-align: left;
     text-indent: 1em;
   }
-#searchicon {
+  #searchicon {
     position: absolute;
     top: 12px;
     right: 7px;
     border: 2px solid #d3d4cf;
   }
-.search form button {
+  .search form button {
     border: 0;
   }
   header .feedback {
@@ -74,12 +63,12 @@ header div {
     align-items: center;
     padding: 0px;
     gap: 4px;
-    }
-header .feedback a {
+  }
+  header .feedback a {
     padding: 10px 20px;
     border: 1px solid #04172a;
     border-radius: 8px;
-    font-family: "Lato";
+
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -87,7 +76,7 @@ header .feedback a {
     color: #a9a9a5;
     text-decoration: none;
   }
-header .feedback a:hover {
+  header .feedback a:hover {
     border: 1px solid #052a4f;
   }
   .profile {
@@ -105,7 +94,7 @@ header .feedback a:hover {
     background-color: #04172a;
     border: 1px solid #04172a;
     text-align: left;
-    font-family: "Lato";
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -113,8 +102,8 @@ header .feedback a:hover {
     color: #a9a9a5;
   }
 
- /* Side Bar */
- section {
+  /* Side Bar */
+  section {
     background-color: #04172a;
     border-right: 1px solid #052a4f;
     position: fixed;
@@ -131,7 +120,6 @@ header .feedback a:hover {
     top: 194px;
   }
   .pages ul {
-    font-family: "Lato";
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,7 +137,6 @@ header .feedback a:hover {
     gap: 6px;
   }
   .pages ul li a {
-    font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0em;
@@ -159,7 +146,6 @@ header .feedback a:hover {
     cursor: pointer;
   }
   a::after {
-    font-family: Lato;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
@@ -167,10 +153,10 @@ header .feedback a:hover {
     text-align: left;
     color: #fdfef8;
   }
-/* Content - Outlier*/
-footer{
+  /* Content - Outlier*/
+  footer {
     margin: 6em 4em 2em 22em;
-}
+  }
 `;
 
 export default SideBarCSS;

@@ -12,57 +12,59 @@ import search from "../images/icons/search.png";
 const SideBar = () => {
   return (
     <SideBarCSS>
-        <header>
-          <div className="search">
-            <form action="">
-              <input name="Languages" type="search" placeholder="Search" />
-              <button>
-                <img id="searchicon" src={search} />
-              </button>
-            </form>
-          </div>
-          <div className="feedback">
-            <Link to="#">Feedback</Link>
-            <Link to="#">Support</Link>
-          </div>
-          <div className="profile">
-            <img src={login} />
-            <select>
-              <option value="Eva Rhed">Eva Rhed</option>
-            </select>
-          </div>
-        </header>
-  <div class="main">
-      <section>
-        <div>
-          <img src={logo} alt="AuthWiki Logo" className="logo" />
+      <header>
+        <div className="search">
+          <form action="">
+            <input name="Languages" type="search" placeholder="Search" />
+            <button>
+              <img id="searchicon" src={search} />
+            </button>
+          </form>
         </div>
-        <div className="pages">
-          <ul>
-            <li>
-              <img src={book} alt="Getting Started" />
-              <Link to="#">Getting Started</Link>
-            </li>
-            <li>
-              <img src={code} alt="Language" />
-              <Link to="#">Language</Link>
-            </li>
-            <li>
-              <img src={feed} alt="Activity Log" />
-              <Link to="#">Activity Log</Link>
-            </li>
-            <li>
-              <img src={people} alt="Community" />
-              <Link to="#">Community</Link>
-            </li>
-            <li>
-              <img src={star} alt="Starred Items" />
-              <Link to="#">Starred Items</Link>
-            </li>
-          </ul>
+        <div className="feedback">
+          <Link to="#">Feedback</Link>
+          <Link to="#">Support</Link>
         </div>
-      </section>
-      <footer><Outlet /><footer>
+        <div className="profile">
+          <img src={login} />
+          <select>
+            <option value="Eva Rhed">Eva Rhed</option>
+          </select>
+        </div>
+      </header>
+      <div class="main">
+        <section>
+          <div>
+            <img src={logo} alt="AuthWiki Logo" className="logo" />
+          </div>
+          <div className="pages">
+            <ul>
+              <li>
+                <img src={book} alt="Getting Started" />
+                <Link to="#">Getting Started</Link>
+              </li>
+              <li>
+                <img src={code} alt="Language" />
+                <Link to="#">Language</Link>
+              </li>
+              <li>
+                <img src={feed} alt="Activity Log" />
+                <Link to="#">Activity Log</Link>
+              </li>
+              <li>
+                <img src={people} alt="Community" />
+                <Link to="#">Community</Link>
+              </li>
+              <li>
+                <img src={star} alt="Starred Items" />
+                <Link to="#">Starred Items</Link>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <footer>
+          <Outlet />
+        </footer>
       </div>
     </SideBarCSS>
   );

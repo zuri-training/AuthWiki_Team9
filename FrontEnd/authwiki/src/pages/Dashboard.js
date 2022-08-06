@@ -32,7 +32,7 @@ const Dashboard = () => {
       </ul>
     );
   }
-  return <SideBar />;
+  return <h2>sgsdgsadadad</h2>;
 };
 
 export default Dashboard;
