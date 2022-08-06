@@ -1,72 +1,72 @@
-import SideBarCSS from "../css/SideBarCSS";
-import { Outlet, Link } from "react-router-dom";
-import book from "../images/icons/clarity_book-line.png";
-import code from "../images/icons/clarity_code-line.png";
-import feed from "../images/icons/fluent_broad-activity-feed-16-regular.png";
-import people from "../images/icons/fluent_people-community-28-regular.png";
-import star from "../images/icons/carbon_star.png";
-import logo from "../images/icons/Logo.png";
-import login from "../images/icons/login.png";
-import search from "../images/icons/search.png";
-
-const SideBar = () => {
+import React from "react";
+import { SidebarCSS } from "../css/SidebarCSS";
+import akar from "../icons/akar.png";
+import Ellipse_17 from "../icons/Ellipse_17.png";
+import Logo from "../icons/Logo.png";
+import clarity_book from "../icons/clarity_book.png";
+import clarity_code from "../icons/clarity_code.png";
+import fluent_broad from "../icons/fluent_broad.png";
+import fluent_people from "../icons/fluent_people.png";
+import carbon_star from "../icons/carbon_star.png";
+const Sidebar = () => {
   return (
-    <SideBarCSS>
-      <div>
+    <SidebarCSS>
         <header>
-          <div className="search">
+            <div className="search">
             <form action="">
-              <input name="Languages" type="search" placeholder="Search" />
-              <button>
-                <img id="searchicon" src={search} />
-              </button>
+                <input name="Languages" type="search" placeholder="Search"></input>
+                <button><img id="searchicon" src="{akar}"/></button>
             </form>
-          </div>
-          <div className="feedback">
-            <Link to="#">Feedback</Link>
-            <Link to="#">Support</Link>
-          </div>
-          <div className="profile">
-            <img src={login} />
-            <select>
-              <option value="Eva Rhed">Eva Rhed</option>
-            </select>
-          </div>
-        </header>
-        <Outlet />
-      </div>
-
-      <section>
+            </div>
+        <div className="feedback">
+            <a href="feedback.html">Feedback</a>
+            <a href="support.html">Support</a>
+        </div>
+        <div className="profile">
+            <img src="{Ellipse 17}"/><select><option value="Eva Rhed">Eva Rhed</option></select>
+        </div>
+    </header>
+    <div class="main">
+    <section>
         <div>
-          <img src={logo} alt="AuthWiki Logo" className="logo" />
+            <img src="{Logo}" alt="AuthWiki Logo" className="logo"/> 
         </div>
-        <div className="pages">
-          <ul>
-            <li>
-              <img src={book} alt="Getting Started" />
-              <Link to="#">Getting Started</Link>
-            </li>
-            <li>
-              <img src={code} alt="Language" />
-              <Link to="#">Language</Link>
-            </li>
-            <li>
-              <img src={feed} alt="Activity Log" />
-              <Link to="#">Activity Log</Link>
-            </li>
-            <li>
-              <img src={people} alt="Community" />
-              <Link to="#">Community</Link>
-            </li>
-            <li>
-              <img src={star} alt="Starred Items" />
-              <Link to="#">Starred Items</Link>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </SideBarCSS>
+       <div className="pages">
+        <ul>
+        <li><img src="{clarity_book}" alt="Getting Started"/><a href="start.html">Getting Started</a></li>
+        <li><img src="{clarity_code}" alt="Language"/><a href="language.html">Language</a></li>
+        <li><img src="{fluent_broad}" alt="Activity Log"/><a href="activity.html">Activity Log</a></li>
+        <li><img src="{fluent_people}" alt="Community"/><a href="#community.html">Community</a></li>
+        <li><img src="{carbon_star}" alt="Starred Items"/><a href="starred.html">Starred Items</a></li>
+        </ul>
+        </div> 
+    </section>
+    <footer>
+    <div class="first" id="#start">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+            <div className="first">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae excepturi laborum maiores dolores dolore, fugit temporibus reprehenderit. Illum deleniti commodi iusto quisquam, aperiam aliquid eveniet! Corporis unde molestiae veniam odit!</h1>
+            </div>
+        </footer>
+    </div>
+    </SidebarCSS>
   );
 };
 
-export default SideBar;
+export default Sidebar;
