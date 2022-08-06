@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 const SideBarCSS = styled.div`
   /* Dashboard Navigation Bar */
+
   .main {
     display: grid;
     grid-template-columns: 20% 80%;
     padding-top: 5rem;
+    height: 100vh;
   }
   header {
     display: flex;
@@ -86,6 +88,9 @@ const SideBarCSS = styled.div`
   .left {
     border-right: 4px solid #052a4f;
     padding-top: 10rem;
+  }
+  .right {
+    overflow: scroll;
   }
   .pages {
   }
