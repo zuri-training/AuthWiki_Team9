@@ -1,0 +1,101 @@
+  
+  h2,
+  h4,
+  .data {
+    color: #fdfef8;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* this is to demonstrate how it will looks like if the sidebar  is included you can remove while merging the code */
+  .side {
+    width: 30%;
+    border: 2px solid #456576;
+    margin-right: 1.5em;
+    color: #fdfef8;
+  }
+  
+  .main_data {
+    width: 80%;
+  }
+  
+  .form-label-container {
+    width: 90%;
+    color: #fdfef8;
+    border: 1px solid #456576;
+    border-top: 5px solid #456576;
+    border-bottom: 15px solid #456576;
+    border-radius: 5px;
+    padding: 1.5em 0.5em;
+    margin-bottom: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  .label-title {
+    font-size: 1.3em;
+  }
+  .label-container {
+    width: 100%;
+    border: 1px solid #456576;
+    padding: 0.5em 0;
+    font-size: 1.4em;
+  }
+  
+  /* input style */
+  input[type="text"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fdfef8;
+    font-size: 1em;
+  }
+  .form-statusbar {
+    width: 90%;
+    color: #fdfef8;
+    border: 1px solid #456576;
+    border-top: 5px solid #456576;
+    border-bottom: 15px solid #456576;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  .btn {
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-edit:hover {
+    background-color: transparent;
+    color: #fdfef8;
+  
+    border: 1px solid #fdfef8;
+  }
+  
+  .btn-cancel {
+    background-color: red;
+    color: #fdfef8;
+  }
+  
+  .btn-cancel:hover {
+    background-color: rgb(196, 6, 6);
+    color: #fdfef8;
+  }
+  
+  .btn-save {
+    background-color: blue;
+    color: #fdfef8;
+  }
+  
+  .btn-save:hover {
+    background-color: blueviolet;
+    color: #fdfef8;
+  }
+  
