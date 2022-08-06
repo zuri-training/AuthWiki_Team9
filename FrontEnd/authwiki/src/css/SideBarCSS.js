@@ -3,33 +3,24 @@ import styled from "styled-components";
 const SideBarCSS = styled.div`
   /* Dashboard Navigation Bar */
   .main {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-top: 5rem;
   }
   header {
-    position: fixed;
-    padding: 52px 720px;
-    background-color: #04172a;
+    display: flex;
+    justify-content: space-around;
   }
   header div {
     display: flex;
   }
   .logo {
-    position: absolute;
     width: 120px;
     height: 68.86px;
-    left: 76px;
-    top: 18px;
   }
   .search form {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     padding: 0px;
-    position: absolute;
-    left: 335px;
-    top: 27px;
   }
   .search input {
     width: 466px;
@@ -45,9 +36,6 @@ const SideBarCSS = styled.div`
     text-indent: 1em;
   }
   #searchicon {
-    position: absolute;
-    top: 12px;
-    right: 7px;
     border: 2px solid #d3d4cf;
   }
   .search form button {
@@ -55,10 +43,6 @@ const SideBarCSS = styled.div`
   }
   header .feedback {
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    left: 883px;
-    top: 28px;
     justify-content: center;
     align-items: center;
     padding: 0px;
@@ -81,14 +65,10 @@ const SideBarCSS = styled.div`
   }
   .profile {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 4px;
-    position: absolute;
-    top: 28px;
-    left: 1214px;
   }
   .profile select {
     background-color: #04172a;
@@ -103,21 +83,11 @@ const SideBarCSS = styled.div`
   }
 
   /* Side Bar */
-  section {
-    background-color: #04172a;
-    border-right: 1px solid #052a4f;
-    position: fixed;
-    width: 293px;
-    height: 100%;
-    left: 0px;
-    top: 1px;
+  .left {
+    border-right: 4px solid #052a4f;
+    padding-top: 10rem;
   }
   .pages {
-    position: absolute;
-    width: 136px;
-    height: 236px;
-    left: 78px;
-    top: 194px;
   }
   .pages ul {
     display: flex;
@@ -153,9 +123,8 @@ const SideBarCSS = styled.div`
     text-align: left;
     color: #fdfef8;
   }
-  /* Content - Outlier*/
-  footer {
-    margin: 6em 4em 2em 22em;
+  article {
+    margin: 20px;
   }
 `;
 
