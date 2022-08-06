@@ -12,28 +12,8 @@ import search from "../images/icons/search.png";
 const SideBar = () => {
   return (
     <SideBarCSS>
-      <header>
-        <div className="search">
-          <form action="">
-            <input name="Languages" type="search" placeholder="Search" />
-            <button>
-              <img id="searchicon" alt="Search" src={search} />
-            </button>
-          </form>
-        </div>
-        <div className="feedback">
-          <Link to="#">Feedback</Link>
-          <Link to="#">Support</Link>
-        </div>
-        <div className="profile">
-          <img alt="Profile Display" src={login} />
-          <select>
-            <option value="Eva Rhed">Eva Rhed</option>
-          </select>
-        </div>
-      </header>
       <div className="main">
-        <section>
+        <section className="left">
           <div>
             <img src={logo} alt="AuthWiki Logo" className="logo" />
           </div>
@@ -62,9 +42,31 @@ const SideBar = () => {
             </ul>
           </div>
         </section>
-        <footer>
-          <Outlet />
-        </footer>
+        <section className="right">
+          <header>
+            <div className="search">
+              <form action="">
+                <input name="Languages" type="search" placeholder="Search" />
+                <button>
+                  <img id="searchicon" alt="Search" src={search} />
+                </button>
+              </form>
+            </div>
+            <div className="feedback">
+              <Link to="#">Feedback</Link>
+              <Link to="#">Support</Link>
+            </div>
+            <div className="profile">
+              <img alt="Profile Display" src={login} />
+              <select>
+                <option value="Eva Rhed">Eva Rhed</option>
+              </select>
+            </div>
+          </header>
+          <article>
+            <Outlet />
+          </article>
+        </section>
       </div>
     </SideBarCSS>
   );
