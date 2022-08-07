@@ -125,7 +125,13 @@ const SideBar = () => {
                   style={{ borderTop: "1px solid #a9a9a5" }}
                   className="dropdown-btn"
                 >
-                  Profile
+                  <Link
+                    style={{ textDecoration: "none", color: " #a9a9a5" }}
+                    className="profile"
+                    to="/profile"
+                  >
+                    Profile
+                  </Link>
                 </button>
               </div>
             </div>

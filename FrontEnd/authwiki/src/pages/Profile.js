@@ -50,12 +50,10 @@ const Profile = () => {
             handleChange={handleChange}
             value={values.username}
           ></ProfileForm>
-          <div className="input-item">
-            <button className="btn">
-              <img src={edit} />
-              Edit
-            </button>
-          </div>
+          <button className="btn-edit">
+            <img src={edit} />
+            Edit
+          </button>
         </form>
       </div>
     </ProfileCSS>

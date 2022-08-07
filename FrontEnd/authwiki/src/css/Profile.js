@@ -20,10 +20,12 @@ const ProfileCSS = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
+    gap: 20px;
+    font-size: 16px;
+    color: #d3d4cf;
   }
   form .input-box {
-    height: 49.230770111083984px;
+    height: 49px;
     width: 560px;
     border-radius: 4px;
     padding: 8px, 16px, 8px, 16px;
@@ -38,7 +40,7 @@ const ProfileCSS = styled.div`
   .form button {
     float: left;
   }
-  .btn {
+  .btn-edit {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,8 +50,8 @@ const ProfileCSS = styled.div`
     padding: 10px 20px;
     width: 182px;
     height: 48px;
-    background: #fff;
     background-color: #fff;
+    border: none;
   }
 `;
 
