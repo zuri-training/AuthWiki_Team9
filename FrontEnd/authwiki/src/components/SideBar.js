@@ -11,6 +11,7 @@ import search from "../images/icons/search.png";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import { logoutUser } from "../store/user/userSlice";
 
 const SideBar = () => {
   const [showLogout, setShowLogout] = useState(false);
@@ -115,7 +116,7 @@ const SideBar = () => {
                 <button
                   type="button"
                   className="dropdown-btn"
-                  onClick={() => dispatch()}
+                  onClick={() => dispatch(logoutUser("Logout Successful"))}
                 >
                   logout
                 </button>

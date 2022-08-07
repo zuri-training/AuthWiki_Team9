@@ -3,6 +3,7 @@ import customFetch from "../../utils/axios";
 import {
   getUserFromLocalStorage,
   addUserToLocalStorage,
+  removeUserFromLocalStorage,
 } from "../../utils/localStorage";
 import { toast } from "react-toastify";
 
@@ -38,6 +39,14 @@ export const loginUser = createAsyncThunk(
 const userSlice = createSlice({
   name: "user",
   initialState,
+  reducers: {
+    logoutUser: (state, { payload }) => {
+      console.log(payload);
+      state.user = null;
+      removeUserFromLocalStorage();
+      toast.success(payload);
+    },
+  },
   extraReducers: {
     [registerUser.pending]: (state) => {
       state.isLoading = true;
@@ -75,4 +84,5 @@ const userSlice = createSlice({
 });
 // auth@auth.com
 
+export const { logoutUser } = userSlice.actions;
 export default userSlice.reducer;
