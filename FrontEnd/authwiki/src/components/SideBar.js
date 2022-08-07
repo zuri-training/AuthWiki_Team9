@@ -22,9 +22,8 @@ const SideBar = () => {
               <li>
                 <img src={book} alt="Getting Started" />
                 <NavLink
-                  to="/dashboard"
+                  to="/"
                   className={({ isActive }) => {
-                    console.log(isActive);
                     return isActive ? "active" : "";
                   }}
                 >
@@ -35,13 +34,12 @@ const SideBar = () => {
               <li>
                 <img src={code} alt="Language" />
                 <NavLink
-                  to="/language"
+                  to="/dashboard"
                   className={({ isActive }) => {
-                    console.log(isActive);
                     return isActive ? "active" : "";
                   }}
                 >
-                  Language
+                  Auth Library
                 </NavLink>
               </li>
               <li>
