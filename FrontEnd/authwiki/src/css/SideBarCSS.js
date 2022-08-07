@@ -131,6 +131,10 @@ const SideBarCSS = styled.div`
   article {
     margin: 20px;
   }
+  .active:link,
+  .active:visited {
+    color: white;
+  }
 `;
 
 export default SideBarCSS;

@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { getAllAuthLib } from "../store/authlib/authlibSlice";
 import Loader from "../components/Loader";
-import SideBar from "../components/SideBar";
+import SingleAuthLIbrary from "../components/SingleAuthLIbrary";
+import AuthLibList from "../css/AuthLibList";
+
 const Dashboard = () => {
   const { isLoading, authlib } = useSelector((state) => state.authlib);
   const dispatch = useDispatch();
@@ -16,20 +17,11 @@ const Dashboard = () => {
   }
   if (authlib.length > 0) {
     return (
-      <ul>
+      <AuthLibList>
         {authlib.map((item) => {
-          return (
-            <li key={item.id}>
-              <h2>
-                {item.name}
-                <span>
-                  <Link to={`/authlib/${item.id}`}> View</Link>
-                </span>
-              </h2>
-            </li>
-          );
+          return <SingleAuthLIbrary key={item.id} {...item} />;
         })}
-      </ul>
+      </AuthLibList>
     );
   }
 };

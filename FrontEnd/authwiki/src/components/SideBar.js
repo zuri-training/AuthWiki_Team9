@@ -1,5 +1,5 @@
 import SideBarCSS from "../css/SideBarCSS";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import book from "../images/icons/clarity_book-line.png";
 import code from "../images/icons/clarity_code-line.png";
 import feed from "../images/icons/fluent_broad-activity-feed-16-regular.png";
@@ -21,23 +21,59 @@ const SideBar = () => {
             <ul>
               <li>
                 <img src={book} alt="Getting Started" />
-                <Link to="#">Getting Started</Link>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => {
+                    return isActive ? "active" : "";
+                  }}
+                >
+                  Getting Started
+                </NavLink>
               </li>
+
               <li>
                 <img src={code} alt="Language" />
-                <Link to="#">Language</Link>
+                <NavLink
+                  to="/dashboard"
+                  className={({ isActive }) => {
+                    return isActive ? "active" : "";
+                  }}
+                >
+                  Auth Library
+                </NavLink>
               </li>
               <li>
                 <img src={feed} alt="Activity Log" />
-                <Link to="#">Activity Log</Link>
+                <NavLink
+                  to="/log"
+                  className={({ isActive }) => {
+                    return isActive ? "active" : "";
+                  }}
+                >
+                  Activity Log
+                </NavLink>
               </li>
               <li>
                 <img src={people} alt="Community" />
-                <Link to="#">Community</Link>
+                <NavLink
+                  to="/community"
+                  className={({ isActive }) => {
+                    return isActive ? "nav-link active" : "nav-link";
+                  }}
+                >
+                  Community
+                </NavLink>
               </li>
               <li>
                 <img src={star} alt="Starred Items" />
-                <Link to="#">Starred Items</Link>
+                <NavLink
+                  to="/star"
+                  className={({ isActive }) => {
+                    return isActive ? "active" : "";
+                  }}
+                >
+                  Starred Items
+                </NavLink>
               </li>
             </ul>
           </div>
