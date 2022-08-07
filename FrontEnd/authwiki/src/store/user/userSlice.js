@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import customFetch from "../../utils/axios";
+import authHeader from "../../utils/authHeader";
+
 import {
   getUserFromLocalStorage,
   addUserToLocalStorage,
@@ -29,6 +31,30 @@ export const loginUser = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const response = await customFetch.post("/user/login", user);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue("Bad credentials");
+    }
+  }
+);
+
+export const getUser = createAsyncThunk("user/get", async (_, thunkAPI) => {
+  try {
+    const response = await customFetch.get("/user", authHeader(thunkAPI));
+    return response.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue("Bad credentials");
+  }
+});
+export const updateUser = createAsyncThunk(
+  "user/patch",
+  async (user, thunkAPI) => {
+    try {
+      const response = await customFetch.patch(
+        "/user/",
+        user,
+        authHeader(thunkAPI)
+      );
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue("Bad credentials");
@@ -77,6 +103,20 @@ const userSlice = createSlice({
       toast.success("Login Successful");
     },
     [loginUser.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      toast.error(payload);
+    },
+    [updateUser.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [updateUser.fulfilled]: (state, { payload }) => {
+      const { token } = getUserFromLocalStorage();
+      state.isLoading = false;
+      state.user = { ...payload, token };
+      addUserToLocalStorage({ ...payload, token });
+      toast.success(`User Updated!`);
+    },
+    [updateUser.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
     },
