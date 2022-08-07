@@ -135,6 +135,47 @@ const SideBarCSS = styled.div`
   .active:visited {
     color: white;
   }
+  .btn-container {
+    position: relative;
+    color: #a9a9a5;
+    font-size: 16px;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.5rem;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #04172a;
+    color: #a9a9a5;
+  }
+  .dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #052a4f;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 0.25rem;
+  }
+  .show-dropdown {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown-btn {
+    background: transparent;
+    border-color: transparent;
+    color: #a9a9a5;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
 `;
 
 export default SideBarCSS;

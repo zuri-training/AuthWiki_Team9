@@ -8,8 +8,16 @@ import star from "../images/icons/carbon_star.png";
 import logo from "../images/icons/Logo.png";
 import login from "../images/icons/login.png";
 import search from "../images/icons/search.png";
+import { FaUserCircle, FaCaretDown } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { logoutUser } from "../store/user/userSlice";
 
 const SideBar = () => {
+  const [showLogout, setShowLogout] = useState(false);
+  const { user } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+
   return (
     <SideBarCSS>
       <div className="main">
@@ -92,11 +100,34 @@ const SideBar = () => {
               <Link to="#">Feedback</Link>
               <Link to="#">Support</Link>
             </div>
-            <div className="profile">
-              <img alt="Profile Display" src={login} />
-              <select>
-                <option value="Eva Rhed">Eva Rhed</option>
-              </select>
+            <div className="btn-container">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => setShowLogout(!showLogout)}
+              >
+                <FaUserCircle />
+                {user.firstName}
+                <FaCaretDown />
+              </button>
+              <div
+                className={showLogout ? "dropdown show-dropdown" : "dropdown"}
+              >
+                <button
+                  type="button"
+                  className="dropdown-btn"
+                  onClick={() => dispatch(logoutUser("Logout Successful"))}
+                >
+                  logout
+                </button>
+                <button
+                  type="button"
+                  style={{ borderTop: "1px solid #a9a9a5" }}
+                  className="dropdown-btn"
+                >
+                  Profile
+                </button>
+              </div>
             </div>
           </header>
           <article>
