@@ -1,8 +1,7 @@
 import React from "react";
 import SingleAuthLIbraryCSS from "../css/SingleAuthLIbrary";
-import jwt from "../images/icons/jwt.png";
-import comments from "../images/icons/comments.png";
-import download from "../images/icons/downloads.png";
+import { FaCommentAlt, FaDownload } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SingleAuthLIbrary = ({
   id,
@@ -20,8 +19,12 @@ const SingleAuthLIbrary = ({
             <div className="passport">
               <div className="details">
                 <div className="image">
-                  <img src={jwt} alt="passport" />
-                  <h1>{name}</h1>
+                  <Link to={`/authlib/${id}`}>
+                    <img src={image} alt="passport" className="auth-image" />
+                  </Link>
+                  <h1>
+                    <Link to={`/authlib/${id}`}>{name}</Link>
+                  </h1>
                 </div>
                 <div>
                   <p>{description.substring(0, 155)}...</p>
@@ -30,13 +33,13 @@ const SingleAuthLIbrary = ({
               <div className="comment">
                 <div className="download">
                   <p>
-                    <img src={comments} />
+                    <FaCommentAlt />
                     {comment.length}
                   </p>
                 </div>
                 <div className="download">
                   <p>
-                    <img src={download} />
+                    <FaDownload />
                     {no_of_downloads}
                   </p>
                 </div>

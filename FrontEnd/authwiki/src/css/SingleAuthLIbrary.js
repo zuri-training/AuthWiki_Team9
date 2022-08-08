@@ -5,7 +5,7 @@ const SingleAuthLIbraryCSS = styled.div`
     display: flex;
     flex-direction: column;
     width: 396px;
-    padding: 20px;
+    padding: 30px 40px;
     height: 202px;
     background: rgba(2, 48, 106, 0.4);
     border: 1px solid #02306a;
@@ -13,17 +13,23 @@ const SingleAuthLIbraryCSS = styled.div`
     border-top: 10px solid rgba(215, 251, 230, 0.31);
     color: #fdfef8;
   }
-  .container a {
+  a:link,
+  a:visited {
     text-decoration: none;
+    color: #fdfef8;
   }
   section div h1 {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    color: #fdfef8;
   }
   section .image {
     display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  .auth-image {
+    height: 30px;
   }
   section .passport2 {
     display: flex;
@@ -37,7 +43,7 @@ const SingleAuthLIbraryCSS = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    gap: 20px;
+    gap: 10px;
   }
   .details p {
     font-size: 16px;
