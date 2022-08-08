@@ -3,8 +3,8 @@ import customFetch from "../../utils/axios";
 import authHeader from "../../utils/authHeader";
 
 const initialState = {
-  isLoading: false,
-  authlib: [],
+  isLoading: true,
+  authlib: {},
   notFound: false,
 };
 
@@ -16,7 +16,7 @@ export const getIDAuthLib = createAsyncThunk(
         `/authlibrary/${id}`,
         authHeader(thunkAPI)
       );
-      console.log(response.data);
+      // console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);

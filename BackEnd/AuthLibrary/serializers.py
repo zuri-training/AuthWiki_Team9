@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import AuthLibrary, CodeSnippet, Comment, DownVote, UpVote
+from .models import AuthLibrary, CodeSnippet, Comment, DownVote, UpVote, Dependency
 
 
 class UpVoteSerializer(serializers.ModelSerializer):
@@ -36,9 +36,16 @@ class CodeSnippetSerializer(serializers.ModelSerializer):
         exclude = ("auth_library",)
 
 
+class DependencySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dependency
+        exclude = ("auth_library",)
+
+
 class AuthLibrarySerializer(serializers.ModelSerializer):
     comment = CommentSerializer(many=True, read_only=True)
     code_snippet = CodeSnippetSerializer(many=True, read_only=True)
+    dependency = DependencySerializer(many=True, read_only=True)
     created_by = serializers.StringRelatedField()
 
     class Meta:
