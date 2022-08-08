@@ -43,6 +43,7 @@ db.sqlite3
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
+mediafiles/
 htmlcov/
 .tox/
 .nox/
