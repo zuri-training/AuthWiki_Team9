@@ -89,6 +89,7 @@ const Register = () => {
                 diff={true}
                 showPassword={values.showPassword}
                 setShowPassword={setShowPassword}
+                needShowPassword={true}
               />
               <button type="submit" className="submit-btn" onClick={onSubmit}>
                 Create Account
