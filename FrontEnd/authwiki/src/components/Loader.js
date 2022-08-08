@@ -11,7 +11,7 @@ const Loader = () => {
       enableBackground="new 0 0 0 0"
       xmlSpace="preserve"
       className=""
-      style={{ width: "150px" }}
+      style={{ width: "150px", display: "block", margin: "250px auto" }}
     >
       <path
         fill="#fff"

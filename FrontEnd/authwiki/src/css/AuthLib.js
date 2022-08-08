@@ -26,10 +26,15 @@ const AuthLibCSS = styled.div`
   .depend {
     margin-top: 30px;
     display: flex;
-    gap: 20px;
+    gap: 2px;
   }
   .depend {
-    padding: 10px;
+    /* padding: 0 10px; */
+  }
+  .dependency {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .title {
     display: flex;
