@@ -24,7 +24,6 @@ const AuthLib = () => {
   if (isLoading) {
     return <Loader />;
   }
-
   const {
     code_snippet,
     comment,
@@ -41,9 +40,9 @@ const AuthLib = () => {
     license,
     install_desc,
     install_snippets,
+    dependency,
   } = authlib;
 
-  console.log(authlib);
   return (
     <AuthLibCSS>
       <div className="single-page">
@@ -93,7 +92,13 @@ const AuthLib = () => {
               <ImCodepen size="25px" />
               <p>Dependency</p>
             </div>
-            <div>passport strategy</div>
+            <div>
+              <ul className="dependency">
+                {dependency?.map((item) => {
+                  return <li key={item.id}>{item.title}</li>;
+                })}
+              </ul>
+            </div>
           </div>
           <div className="install">
             <h4>Installation</h4>
