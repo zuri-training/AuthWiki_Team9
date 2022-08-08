@@ -36,6 +36,11 @@ const AuthLib = () => {
     language,
     name,
     no_of_downloads,
+    version,
+    repo_link,
+    license,
+    install_desc,
+    install_snippets,
   } = authlib;
 
   console.log(authlib);
@@ -51,16 +56,16 @@ const AuthLib = () => {
             <center>By {created_by}</center>
           </div>
           <p>
-            License:<span> MIT</span>
+            License:<span> {license}</span>
           </p>
           <p>
             Codestyle:<span> Standard</span>
           </p>
           <p>
-            Version:<span> 1.0</span>
+            Version:<span> {version}</span>
           </p>
           <p>
-            Repository:<span> https://github.com/jaredhanson/passport</span>
+            Repository:<span>{repo_link} </span>
             <button
               id="btn"
               placeholder="Download"
@@ -92,7 +97,10 @@ const AuthLib = () => {
           </div>
           <div className="install">
             <h4>Installation</h4>
-            <div id="installation"></div>
+            <div id="installation">
+              <p>{install_desc}</p>
+              <Code code={install_snippets} language={language} />
+            </div>
           </div>
           <div className="usage">
             <h4>USAGE</h4>

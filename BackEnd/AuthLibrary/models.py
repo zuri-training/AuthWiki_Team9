@@ -26,7 +26,24 @@ class CodeSnippet(models.Model):
         return f"{self.title} || {str(self.id)}"
 
 
+class Dependency(models.Model):
+    title = models.CharField(max_length=255)
+    auth_library = models.ForeignKey(
+        "AuthLibrary", on_delete=models.CASCADE, related_name="dependency"
+    )
+
+    def __str__(self):
+        return f"{self.title} for {str(self.auth_library)}"
+
+
 class AuthLibrary(models.Model):
+    LICENSE = (
+        ('M.I.T', 'M.I.T'),
+        ('APACHE', "APACHE"),
+        ('OTHERS', "OTHERS"),
+        ('UNKNOWN', "UNKNOWN"),
+    )
+
     name = models.CharField(max_length=255)
     description = models.TextField()
     no_of_downloads = models.PositiveIntegerField()
@@ -35,6 +52,11 @@ class AuthLibrary(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     image = models.ImageField(null=True, upload_to=auth_lib_image_file_path)
     language = models.CharField(max_length=10, default="python")
+    version = models.CharField(max_length=5, default="1.0")
+    install_desc = models.CharField(max_length=255, default="Install description")
+    install_snippets = models.TextField(default="pip install auth")
+    license = models.CharField(max_length=10, choices=LICENSE, default='M.I.T')
+    repo_link = models.URLField(max_length=255, default='https://github.com/')
 
     def __str__(self):
         return f"{self.name}"

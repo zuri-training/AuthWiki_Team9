@@ -10,7 +10,7 @@ export default function Code({ code, language }) {
   return (
     <div className="Code">
       <pre>
-        <code className={`language-${"java"}`}>{code}</code>
+        <code className={`language-${language}`}>{code}</code>
       </pre>
     </div>
   );
