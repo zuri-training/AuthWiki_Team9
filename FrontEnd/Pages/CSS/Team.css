@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #04172A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: "Lato";
+    color: #D3D4CF;
+    margin: 2em;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header h1{
+    font-family: Lato;
+    font-size: 80px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 120px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.header h3{
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+}
+.header b{
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #B392E9EB;
+    position: relative;
+    bottom: 12px;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.team h4{
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    color: #B392E9EB;
+    text-align: center;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.member{
+    text-align: center;
+}
+.member img{
+    width: 60%;
+}
