@@ -30,7 +30,6 @@ const AuthLib = () => {
     created_by,
     created_on,
     description,
-    id,
     image,
     language,
     name,
@@ -107,6 +106,18 @@ const AuthLib = () => {
               <Code code={install_snippets} language={language} />
             </div>
           </div>
+          {code_snippet?.map((item) => {
+            return (
+              <div className="install" key={item.id}>
+                <h4>Example</h4>
+                <div id="installation">
+                  <p>{item.title}</p>
+                  <Code code={item.description} language={language} />
+                </div>
+              </div>
+            );
+          })}
+
           <div className="usage">
             <h4>USAGE</h4>
             <p>
