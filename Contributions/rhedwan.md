@@ -23,6 +23,12 @@
 | Customize the Response of the ObtainAuthToken            | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/118) |
 | Implement Dashboard Functionality             | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/124) |
 | fix all the css bugs              | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/133) |
-| fix the UI on the dashboard page and the AuthLibrary communication             | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/138) |
+| fix the UI on the dashboard page and the AuthLibrary communication | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/138) |
 | Implement Logout functionality             | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/140) |
 | Implement User Profile page Functionality              | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/141) |
+| fix User Profile page Functionality                                 | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/142)  |
+| Implement Retrieve view for Auth Libraries                | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/143)  |
+| Fix the UI on Library List                                     | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/144)  |
+| Bug on the Frontend: showPassword visibility     | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/145)  |
+| Implement Retrieving of Auth Libraries           | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/146)  |
+| fix the Installation code snippet          | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/147)  |
