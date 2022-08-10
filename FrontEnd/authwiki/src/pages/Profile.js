@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProfileForm from "../components/ProfileForm";
 import ProfileCSS from "../css/Profile";
-import edit from "../images/icons/edit.png";
 import { useDispatch, useSelector } from "react-redux";
-import { getUser, updateUser } from "../store/user/userSlice";
+import { updateUser } from "../store/user/userSlice";
 import { toast } from "react-toastify";
+import { AiFillEdit } from "react-icons/ai";
 
 const Profile = () => {
-  const { isLoading, user } = useSelector((store) => store.user);
+  const { user } = useSelector((store) => store.user);
   const initialState = {
     email: user.email || "",
     firstName: user.firstName || "",
@@ -64,7 +64,7 @@ const Profile = () => {
             value={values.username}
           ></ProfileForm>
           <button type="submit" className="btn-edit" onClick={onSubmit}>
-            <img src={edit} />
+            <AiFillEdit size="20px" color="#04172a" />
             Edit
           </button>
         </form>

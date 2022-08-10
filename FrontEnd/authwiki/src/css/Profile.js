@@ -21,8 +21,8 @@ const ProfileCSS = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    font-size: 16px;
-    color: #d3d4cf;
+    font-size: 18px;
+    color: #a9a9a5;
   }
   form .input-box {
     height: 49px;
@@ -52,6 +52,11 @@ const ProfileCSS = styled.div`
     height: 48px;
     background-color: #fff;
     border: none;
+    font-size: 20px;
+  }
+  input:focus {
+    /* outline: none !important; */
+    outline: #052a4fbf solid 0.1rem !important;
   }
 `;
 

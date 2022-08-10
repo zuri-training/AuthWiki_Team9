@@ -34,14 +34,11 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link to="/">Examples</Link>
+              <Link to="/allauthlib">Examples</Link>
             </li>
 
             <li>
               <Link to="/">Team</Link>
-            </li>
-            <li>
-              <Link to="/">Contact</Link>
             </li>
           </ul>
 

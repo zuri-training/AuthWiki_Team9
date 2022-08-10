@@ -112,7 +112,7 @@ const SideBarCSS = styled.div`
     gap: 6px;
   }
   .pages ul li a {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0em;
     text-align: left;

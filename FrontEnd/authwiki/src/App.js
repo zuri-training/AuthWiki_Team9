@@ -6,7 +6,7 @@ import {
   Dashboard,
   Profile,
   ProtectedRoute,
-  AuthLib,
+  AllAuthLib,
   StarItem,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -23,6 +23,7 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="login" element={<Login />}></Route>
           <Route path="register" element={<Register />}></Route>
+          <Route path="allauthlib" element={<AllAuthLib />}></Route>
         </Route>
         <Route
           path="/"

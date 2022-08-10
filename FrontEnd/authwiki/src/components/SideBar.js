@@ -1,14 +1,11 @@
 import SideBarCSS from "../css/SideBarCSS";
 import { Outlet, Link, NavLink } from "react-router-dom";
-import book from "../images/icons/clarity_book-line.png";
-import code from "../images/icons/clarity_code-line.png";
-import feed from "../images/icons/fluent_broad-activity-feed-16-regular.png";
-import people from "../images/icons/fluent_people-community-28-regular.png";
-import star from "../images/icons/carbon_star.png";
 import logo from "../images/icons/Logo.png";
-import login from "../images/icons/login.png";
 import search from "../images/icons/search.png";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { HiCode } from "react-icons/hi";
+import { BiBookBookmark } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { logoutUser } from "../store/user/userSlice";
@@ -28,7 +25,7 @@ const SideBar = () => {
           <div className="pages">
             <ul>
               <li>
-                <img src={book} alt="Getting Started" />
+                <BiBookBookmark size="30px" color="#a9a9a5" />
                 <NavLink
                   to="/"
                   className={({ isActive }) => {
@@ -40,7 +37,7 @@ const SideBar = () => {
               </li>
 
               <li>
-                <img src={code} alt="Language" />
+                <HiCode size="30px" color="#a9a9a5" />
                 <NavLink
                   to="/dashboard"
                   className={({ isActive }) => {
@@ -51,36 +48,14 @@ const SideBar = () => {
                 </NavLink>
               </li>
               <li>
-                <img src={feed} alt="Activity Log" />
+                <CgProfile size="30px" color="#a9a9a5" />
                 <NavLink
-                  to="/log"
+                  to="/profile"
                   className={({ isActive }) => {
                     return isActive ? "active" : "";
                   }}
                 >
-                  Activity Log
-                </NavLink>
-              </li>
-              <li>
-                <img src={people} alt="Community" />
-                <NavLink
-                  to="/community"
-                  className={({ isActive }) => {
-                    return isActive ? "nav-link active" : "nav-link";
-                  }}
-                >
-                  Community
-                </NavLink>
-              </li>
-              <li>
-                <img src={star} alt="Starred Items" />
-                <NavLink
-                  to="/star"
-                  className={({ isActive }) => {
-                    return isActive ? "active" : "";
-                  }}
-                >
-                  Starred Items
+                  Profile
                 </NavLink>
               </li>
             </ul>
