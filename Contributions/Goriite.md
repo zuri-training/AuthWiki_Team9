@@ -7,4 +7,5 @@
 | Issue/ Task       | Pull Request / Issues / Commit                                          |
 | ----------------- | ----------------------------------------------------------------------- |
 | Settings page for authenticated users #94 | [Issues](https://github.com/zuri-training/AuthWiki_Team9/issues/94) |
+| "Our Team" Screen Design #163 | [Issues](https://github.com/zuri-training/AuthWiki_Team9/issues/163) |
 

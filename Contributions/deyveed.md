@@ -1,10 +1,9 @@
-# Name of Member
+# David Nyong
 
-##### Track/ Position: **Track**
+##### Track/ Position: **Product Designer**
 
 ## Contributions
 
 | Issue/ Task       | Pull Request / Issues / Commit                                          |
 | ----------------- | ----------------------------------------------------------------------- |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
+| "Examples/Doc" Page Design - 2 #89 | [Issue](https://github.com/zuri-training/AuthWiki_Team9/issues/89) |
