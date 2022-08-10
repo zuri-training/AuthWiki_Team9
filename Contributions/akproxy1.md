@@ -1,10 +1,9 @@
-# Name of Member
+# Akeem Adeoti
 
-##### Track/ Position: **Track**
+##### Track/ Position: **Back-End**
 
 ## Contributions
 
-| Issue/ Task       | Pull Request / Issues / Commit                                          |
-| ----------------- | ----------------------------------------------------------------------- |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
+| Issue/ Task                          | Pull Request / Issues / Commit                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------ |
+| Implement Error Page (Functionality) | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/55) |

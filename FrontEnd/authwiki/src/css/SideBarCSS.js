@@ -19,6 +19,7 @@ const SideBarCSS = styled.div`
   .logo {
     width: 120px;
     height: 68.86px;
+    margin-bottom: 3rem;
   }
   .search form {
     display: flex;
@@ -100,7 +101,7 @@ const SideBarCSS = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
-    gap: 29px;
+    gap: 15px;
     list-style: none;
   }
   .pages ul li {

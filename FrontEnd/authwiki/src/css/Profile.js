@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ProfileCSS = styled.div`
   .form {
-    margin: 3em 0em;
+    margin: 8em 0em;
     display: flex;
     flex-direction: column;
     justify-content: center;
