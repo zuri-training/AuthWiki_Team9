@@ -1,26 +1,32 @@
 import React from "react";
 import "../css/HeroSection.css";
 import { FaSquareFull } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   return (
     <div className="hero">
       <div className="title-wrapper">
         <h2 className="title copy">
-          Copy
+          Discover
           <FaSquareFull className="icon" />
         </h2>
         <h2 className="title paste">
-          Paste
+          Copy
           <FaSquareFull className="icon" />
         </h2>
         <h2 className="title test">
-          Test
+          Build
+          <FaSquareFull className="icon" />
+        </h2>
+        <h2 className="title copy">
+          Interact
           <FaSquareFull className="icon" />
         </h2>
       </div>
-      <a href="#" className="docs-btn">
-        Documentation
-      </a>
+      <Link to="/allauthlib" className="docs-btn">
+        View Authentication libraries
+      </Link>
       <div className="para-container">
         <p className="desc">
           <a href="#">AuthWiki</a> combines the best developer experience with

@@ -12,10 +12,7 @@ export const getAllAuthLib = createAsyncThunk(
   "authlib/",
   async (_, thunkAPI) => {
     try {
-      const response = await customFetch.get(
-        "/authlibrary/",
-        authHeader(thunkAPI)
-      );
+      const response = await customFetch.get("/authlibrary/");
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);

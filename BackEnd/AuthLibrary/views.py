@@ -22,7 +22,7 @@ class AuthLibraryView(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action == "list":
-            self.permission_classes = [IsAuthenticated]
+            self.permission_classes = []
         else:
             self.permission_classes = [IsAdminUser]
         return super(self.__class__, self).get_permissions()
