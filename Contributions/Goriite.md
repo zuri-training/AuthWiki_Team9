@@ -1,10 +1,11 @@
-# Name of Member
+# Fehintola Bolagbade
 
-##### Track/ Position: **Track**
+##### Track/ Position: **Product Designer**
 
 ## Contributions
 
 | Issue/ Task       | Pull Request / Issues / Commit                                          |
 | ----------------- | ----------------------------------------------------------------------- |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
+| Settings page for authenticated users #94 | [Issues](https://github.com/zuri-training/AuthWiki_Team9/issues/94) |
+| "Our Team" Screen Design #163 | [Issues](https://github.com/zuri-training/AuthWiki_Team9/issues/163) |
+

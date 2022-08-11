@@ -1,10 +1,9 @@
-# Name of Member
+# Ojukwu Amarachi Grace
 
-##### Track/ Position: **Track**
+##### Track/ Position: **Product Design**
 
 ## Contributions
 
 | Issue/ Task       | Pull Request / Issues / Commit                                          |
 | ----------------- | ----------------------------------------------------------------------- |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
-| Name to the issue | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/) |
+| Reset Password Screen Design #90 | [Issue](https://github.com/zuri-training/AuthWiki_Team9/issues/90) |
