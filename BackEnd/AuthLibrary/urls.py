@@ -16,8 +16,8 @@ app_name = ""
 urlpatterns = [
     path("", include(routers.urls)),
     path("<int:pk>/create_comment", CommentAPIView.as_view(), name="create-comment"),
-    path("<int:pk>/create_upvote", UpVoteAPIView.as_view(), name="create-upvote"),
-    path("<int:pk>/create_downvote", DownVoteAPIView.as_view(), name="create-downvote"),
+    path("comment/<int:pk>/create_upvote", UpVoteAPIView.as_view(), name="create-upvote"),
+    path("comment/<int:pk>/create_downvote", DownVoteAPIView.as_view(), name="create-downvote"),
     path(
         "<int:pk>/create_code_snippet",
         CodeSnippetAPIView.as_view(),

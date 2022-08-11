@@ -7,7 +7,7 @@ const initialState = {
   authlib: {},
   notFound: false,
 };
-
+// ;
 export const getIDAuthLib = createAsyncThunk(
   "authlib/",
   async (id, thunkAPI) => {
@@ -23,6 +23,32 @@ export const getIDAuthLib = createAsyncThunk(
     }
   }
 );
+export const upVote = createAsyncThunk("authlib/", async (id, thunkAPI) => {
+  try {
+    const response = await customFetch.post(
+      `/comment/${id}/create_upvote`,
+      {},
+      authHeader(thunkAPI)
+    );
+    // console.log(response.data);
+    return response.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.response.data);
+  }
+});
+export const downVote = createAsyncThunk("authlib/", async (id, thunkAPI) => {
+  try {
+    const response = await customFetch.post(
+      `/comment/${id}/create_downvote`,
+      {},
+      authHeader(thunkAPI)
+    );
+    // console.log(response.data);
+    return response.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.response.data);
+  }
+});
 
 const getIDAuthLibSlice = createSlice({
   name: "authlibID",

@@ -8,6 +8,8 @@ import { Navigate } from "react-router-dom";
 import AuthLibCSS from "../../css/AuthLib";
 import Loader from "../../components/Loader";
 import { ImCodepen } from "react-icons/im";
+import Comment from "../../components/Comment";
+
 const AuthLib = () => {
   const { authlibId } = useParams();
   const dispatch = useDispatch();
@@ -117,6 +119,18 @@ const AuthLib = () => {
               </div>
             );
           })}
+          <div className="comment">
+            <h4>Comment</h4>
+            <div className="input-container">
+              <input type="text" placeholder="Comment.." />
+              <button className="btn">Comment</button>
+            </div>
+            <div id="installation">
+              {comment?.map((item) => {
+                return <Comment key={item.id} {...item}></Comment>;
+              })}
+            </div>
+          </div>
 
           <div className="usage">
             <h4>USAGE</h4>
