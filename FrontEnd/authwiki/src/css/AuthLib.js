@@ -82,6 +82,46 @@ const AuthLibCSS = styled.div`
     padding: 5px;
     background-color: #051d36;
   } */
+  .comment {
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      /* width: 80%;
+    margin: 0 auto; */
+    }
+    input {
+      padding: 0.5em;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border: 2px solid #2eb394;
+      border-radius: 8px;
+      color: #fdfef8;
+      font-size: 1.2em;
+    }
+
+    ::placeholder {
+      color: #fdfef8;
+      padding: 0;
+    }
+    .btn {
+      font-size: 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #2eb394;
+      width: 150px;
+      padding: 10px;
+    }
+  }
+
+  /* .btn:hover {
+    background-color: transparent;
+    color: #fdfef8;
+    border: 2px solid #d9d9d9;
+  } */
 `;
 
 export default AuthLibCSS;

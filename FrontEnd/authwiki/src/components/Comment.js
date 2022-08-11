@@ -1,59 +1,52 @@
-import "../css/Comment.css";
+import CommentCSS from "../css/Comment.js";
 import { useState } from "react";
 import { BiLike, BiDislike } from "react-icons/bi";
+import moment from "moment";
+import { upVote, downVote } from "../store/authlibId/authlibIDSlice.js";
+import { useDispatch } from "react-redux";
 
-const Comment = () => {
-  const [comment, setComment] = useState("");
-  const [like, setLike] = useState(false);
-  const [disLike, setDisLike] = useState(false);
-  const [storeComment, setStoreCooment] = useState([]);
+const Comment = ({
+  id,
+  author_name,
+  comment_body,
+  downvote_user,
+  upvote_user,
+  date_created,
+}) => {
+  const dispatch = useDispatch();
+  const date = moment(date_created).format("MMMM Do YYYY, h:mm a");
+  function getFirstLetters(str) {
+    const firstLetters = str
+      .split(" ")
+      .map((word) => word[0])
+      .join("");
 
-  const addComment = () => {
-    const newStoreComment = [...storeComment, comment];
-    setStoreCooment(newStoreComment);
-  };
-
-  const handleLike = () => {
-    // implementation
-  };
-
-
-  const handleChange = (e) => {
-    setComment(e.target.value);
-  };
+    return firstLetters;
+  }
   return (
-    <div className="container">
-      <div className="input-container">
-        <input type="text" placeholder="Comment.." onChange={handleChange} />
-        <button className="btn" onClick={addComment}>
-          Comment
-        </button>
-      </div>
-      {storeComment.map((item, key) => (
+    <CommentCSS>
+      <div className="container">
         <div className="comment-container">
           <div className="user">
-            <img src="user.jpg" alt="user" className="image" />
-            <h3 className="title">Bilal</h3>
-            <p>Senior Backend developer</p>
+            <div className="profile-name">{getFirstLetters(author_name)}</div>
+            <h3 className="author">
+              {author_name} commented on {date}{" "}
+            </h3>
           </div>
-          <p className="comment">{item}</p>
+          <p className="comment">{comment_body} </p>
           <div className="likes">
-            <BiLike
-              onClick={handleLike}
-              className="like"
-              style={{ color: like && "green" }}
-            />
-            <span>Like</span> |{" "}
-            <BiDislike
-              onClick={handleLike}
-              className="dislike"
-              style={{ color: disLike && "green" }}
-            />
-            <span> Dislike</span>
+            <div>
+              <BiLike className="like" style={{}} />
+              <span>{downvote_user.length}</span>
+            </div>
+            <div>
+              <BiDislike className="dislike" style={{}} />
+              <span> {upvote_user.length}</span>
+            </div>
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </CommentCSS>
   );
 };
 
