@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-jv8_)*edm#p8^^&@q@1gqfdm!+5pgwodzkdi6i5a+v9nft7bsg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['authwiki9.zurifordummies.com', '148.251.6.230', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['authwiki9be.zurifordummies.com', '148.251.6.230', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+	'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -81,9 +82,13 @@ WSGI_APPLICATION = "AuthWikiCore.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'authwiki9',
+        'USER': 'rhedwan',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -119,8 +124,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "static/static/"
-MEDIA_URL = "static/media/"
+STATIC_URL = "static/"
+MEDIA_URL = "media/"
 MEDIA_ROOT = "mediafiles"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
@@ -160,3 +165,4 @@ SPECTACULAR_SETTINGS = {
 # ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
