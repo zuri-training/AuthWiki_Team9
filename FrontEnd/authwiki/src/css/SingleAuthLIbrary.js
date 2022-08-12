@@ -6,7 +6,7 @@ const SingleAuthLIbraryCSS = styled.div`
     flex-direction: column;
     width: 396px;
     padding: 30px 40px;
-    height: 202px;
+    height: 242px;
     background: rgba(2, 48, 106, 0.4);
     border: 1px solid #02306a;
     border-radius: 8px;
@@ -65,6 +65,21 @@ const SingleAuthLIbraryCSS = styled.div`
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0em;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .language {
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+    font-size: 18px;
+    color: #09241e;
+    background-color: #2eb394;
   }
 `;
 

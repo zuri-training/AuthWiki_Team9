@@ -10,6 +10,7 @@ const SingleAuthLIbrary = ({
   image,
   comment,
   no_of_downloads,
+  language,
 }) => {
   return (
     <SingleAuthLIbraryCSS>
@@ -26,8 +27,11 @@ const SingleAuthLIbrary = ({
                     <Link to={`/authlib/${id}`}>{name}</Link>
                   </h1>
                 </div>
-                <div>
+                <div className="text">
                   <p>{description.substring(0, 155)}...</p>
+                  <span className="language">
+                    {language.charAt(0).toUpperCase() + language.slice(1)}
+                  </span>
                 </div>
               </div>
               <div className="comment">
