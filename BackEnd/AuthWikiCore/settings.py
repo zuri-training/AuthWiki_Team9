@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-jv8_)*edm#p8^^&@q@1gqfdm!+5pgwodzkdi6i5a+v9nft7bsg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['authwiki9be.zurifordummies.com', '148.251.6.230', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['authwiki9be.zurifordummies.com', 'www.authwiki9be.zurifordummies.com',
+                 '148.251.6.230', 'localhost', '127.0.0.1']
 
 # Application definition
 
