@@ -24,25 +24,30 @@ const AuthLibCSS = styled.div`
     margin-top: 30px;
   }
   .depend {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
+    flex-direction: column;
     gap: 2px;
-  }
-  .depend {
-    /* padding: 0 10px; */
   }
   .dependency {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #2eb394;
+    font-size: 16px;
   }
   .title {
     display: flex;
     gap: 10px;
+    width: fit-content;
     align-items: center;
     border-left: 2px solid rgba(255, 255, 255, 0.06);
     border-right: 2px solid rgba(255, 255, 255, 0.06);
-    padding: 20px;
+    padding: 0 20px;
+  }
+  .depend-title {
+    font-size: 16px;
+    margin-left: 20px;
   }
   span {
     color: #2eb394;
@@ -76,6 +81,12 @@ const AuthLibCSS = styled.div`
     letter-spacing: 0em;
     text-align: left;
   }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #2eb394;
+    font-size: 20px;
+  }
   /* #installation {
     height: 50px;
     width: 700px;
@@ -85,13 +96,14 @@ const AuthLibCSS = styled.div`
   .comment {
     .input-container {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
       justify-content: center;
       gap: 10px;
       /* width: 80%;
     margin: 0 auto; */
     }
     input {
+      width: 70%;
       padding: 0.5em;
       border: none;
       outline: none;
@@ -115,13 +127,17 @@ const AuthLibCSS = styled.div`
       width: 150px;
       padding: 10px;
     }
+    .comment-view {
+      margin-top: 20px;
+      margin-left: 60px;
+      display: inline-block;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #2eb394;
+      font-size: 20px;
+    }
   }
-
-  /* .btn:hover {
-    background-color: transparent;
-    color: #fdfef8;
-    border: 2px solid #d9d9d9;
-  } */
 `;
 
 export default AuthLibCSS;
