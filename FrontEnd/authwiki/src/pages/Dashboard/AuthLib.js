@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Code from "../../components/Code";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -9,6 +9,7 @@ import AuthLibCSS from "../../css/AuthLib";
 import Loader from "../../components/Loader";
 import { ImCodepen } from "react-icons/im";
 import Comment from "../../components/Comment";
+import { FaDownload } from "react-icons/fa";
 
 const AuthLib = () => {
   const { authlibId } = useParams();
@@ -16,6 +17,8 @@ const AuthLib = () => {
   const { notFound, authlib, isLoading } = useSelector(
     (state) => state.authlibID
   );
+  const [showComment, setShowComment] = useState(false);
+
   useEffect(() => {
     dispatch(getIDAuthLib(authlibId));
   }, [authlibId, dispatch]);
@@ -30,12 +33,10 @@ const AuthLib = () => {
     code_snippet,
     comment,
     created_by,
-    created_on,
     description,
     image,
     language,
     name,
-    no_of_downloads,
     version,
     repo_link,
     license,
@@ -48,7 +49,7 @@ const AuthLib = () => {
     <AuthLibCSS>
       <div className="single-page">
         <div className="cta-section">
-          <img id="mg" src={image} />
+          <img id="mg" src={image} alt={name} />
           <h1>{name}</h1>
         </div>
         <div id="auth">
@@ -65,20 +66,27 @@ const AuthLib = () => {
             Version:<span> {version}</span>
           </p>
           <p>
-            Repository:<span>{repo_link} </span>
+            <a href={repo_link} target="_blank" rel="noreferrer">
+              View Repository
+            </a>
             <button
               id="btn"
-              placeholder="Download"
+              className="download-btn"
               style={{
                 backgroundColor: "#2eb394",
-                height: "40px",
-                width: "100px",
-                color: "black",
+                color: "#09241E",
                 borderRadius: "5px",
                 border: "none",
                 float: "right",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "10px 10px",
+                fontSize: "15px",
+                fontWeight: "bold",
               }}
             >
+              <FaDownload size="20px" />
               Download
             </button>
           </p>
@@ -94,6 +102,7 @@ const AuthLib = () => {
               <p>Dependency</p>
             </div>
             <div>
+              <h3 className="depend-title">{name} requires the following:</h3>
               <ul className="dependency">
                 {dependency?.map((item) => {
                   return <li key={item.id}>{item.title}</li>;
@@ -108,27 +117,37 @@ const AuthLib = () => {
               <Code code={install_snippets} language={language} />
             </div>
           </div>
-          {code_snippet?.map((item) => {
-            return (
-              <div className="install" key={item.id}>
-                <h4>Example</h4>
-                <div id="installation">
-                  <p>{item.title}</p>
-                  <Code code={item.description} language={language} />
+          <div>
+            <h4>Example</h4>
+            {code_snippet?.map((item) => {
+              return (
+                <div className="install" key={item.id}>
+                  <div id="installation">
+                    <p>{item.title}</p>
+                    <Code code={item.description} language={language} />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
           <div className="comment">
             <h4>Comment</h4>
             <div className="input-container">
               <input type="text" placeholder="Comment.." />
               <button className="btn">Comment</button>
             </div>
+
             <div id="installation">
-              {comment?.map((item) => {
-                return <Comment key={item.id} {...item}></Comment>;
-              })}
+              <button
+                className="comment-view"
+                onClick={() => setShowComment(!showComment)}
+              >
+                {showComment ? "Show Less Comment" : "Show More Comment"}
+              </button>
+              {showComment &&
+                comment?.map((item) => {
+                  return <Comment key={item.id} {...item}></Comment>;
+                })}
             </div>
           </div>
 
