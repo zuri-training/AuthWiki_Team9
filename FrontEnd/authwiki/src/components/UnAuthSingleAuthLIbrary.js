@@ -18,11 +18,11 @@ const UnAuthSingleAuthLIbrary = ({
           <div className="item">
             <div className="details">
               <div className="image">
-                <Link to={`/`}>
+                <Link to={`/library/${id}`}>
                   <img src={image} alt="passport" className="auth-image" />
                 </Link>
                 <h1>
-                  <Link to={`/`}>{name}</Link>
+                  <Link to={`/library/${id}`}>{name}</Link>
                 </h1>
               </div>
               <div>
