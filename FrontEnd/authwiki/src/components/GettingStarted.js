@@ -18,46 +18,32 @@ const GettingStarted = () => {
       <div>
         <ul className="ul">
           <li className="li">
-            <a href="" id="icon1">
-              <img src={JS} alt="JS" />
-            </a>
+            <img src={JS} alt="JS" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={PHP} alt="PHP" />
-            </a>
+            <img src={PHP} alt="PHP" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={Python} alt="Python" />
-            </a>
+            <img src={Python} alt="Python" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={Csharp} alt="C#" />
-            </a>
+            <img src={Csharp} alt="C#" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={GoLang} alt="GoLang" />
-            </a>
+            <img src={GoLang} alt="GoLang" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={cplus} alt="C++" />
-            </a>
+            <img src={cplus} alt="C++" />
           </li>
           <li className="li">
-            <a href="" className="icon">
-              <img src={TS} alt="TS" />
-            </a>
+            <img src={TS} alt="TS" />
           </li>
         </ul>
       </div>
 
       <div id="div3">
         <div id="imgdiv">
-          <img src={sample} alt="image" className="img" />
+          <img src={sample} alt="Code Sample" className="img" />
         </div>
 
         <div id="indiv">

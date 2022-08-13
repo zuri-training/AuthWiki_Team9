@@ -1,9 +1,8 @@
 import CommentCSS from "../css/Comment.js";
-import { useState } from "react";
 import { BiLike, BiDislike } from "react-icons/bi";
 import moment from "moment";
-import { upVote, downVote } from "../store/authlibId/authlibIDSlice.js";
-import { useDispatch } from "react-redux";
+// import { upVote, downVote } from "../store/authlibId/authlibIDSlice.js";
+// import { useDispatch } from "react-redux";
 
 const Comment = ({
   id,
@@ -13,7 +12,7 @@ const Comment = ({
   upvote_user,
   date_created,
 }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const date = moment(date_created).format("MMMM Do YYYY, h:mm a");
   function getFirstLetters(str) {
     const firstLetters = str

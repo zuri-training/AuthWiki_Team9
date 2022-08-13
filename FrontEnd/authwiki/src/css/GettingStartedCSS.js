@@ -4,11 +4,13 @@ export const GettingStartedCSS = styled.main`
   .ul {
     overflow: hidden;
     list-style-type: none;
-    justify-content: left;
+    justify-content: space-evenly;
     align-items: left;
     margin: auto;
     padding: 0px;
     padding-bottom: 15px;
+    gap: 20px;
+    display: flex;
   }
 
   .li {

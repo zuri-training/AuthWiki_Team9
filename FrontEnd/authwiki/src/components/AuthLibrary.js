@@ -1,4 +1,3 @@
-import { GoPrimitiveDot } from "react-icons/go";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbBrandSass, TbBrandVue } from "react-icons/tb";
 import { SiArtixlinux, SiSpring } from "react-icons/si";
