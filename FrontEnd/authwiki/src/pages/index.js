@@ -8,6 +8,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import AuthLib from "./AuthLib";
 import AllAuthLib from "./AllAuthLib";
 import StarItem from "./Dashboard/StarItem";
+import UserAuthLib from "./Unauthenticate/UserAuthLib";
+import Team from "./Team";
 
 export {
   Home,
@@ -20,4 +22,6 @@ export {
   AuthLib,
   StarItem,
   AllAuthLib,
+  UserAuthLib,
+  Team,
 };
