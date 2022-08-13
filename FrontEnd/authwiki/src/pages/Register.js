@@ -1,5 +1,5 @@
 import { registerUser } from "../store/user/userSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import Container from "../css/Login";
 import Form from "../components/Form";
@@ -19,7 +19,6 @@ const Register = () => {
   };
   const [values, setValues] = useState(initialState);
   const dispatch = useDispatch();
-  const { user, isLoading } = useSelector((store) => store.user);
   const onSubmit = (e) => {
     e.preventDefault();
     const { email, firstName, lastName, password, username } = values;
