@@ -26,7 +26,7 @@ function App() {
           <Route path="login" element={<Login />}></Route>
           <Route path="register" element={<Register />}></Route>
           <Route path="team" element={<Team />}></Route>
-          <Route path="allauthlib" element={<AllAuthLib />}></Route>
+          <Route path="library" element={<AllAuthLib />}></Route>
           <Route path="library/:authlibId" element={<UserAuthLib />}></Route>
         </Route>
         <Route

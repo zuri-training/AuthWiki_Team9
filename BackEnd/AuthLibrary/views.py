@@ -18,14 +18,14 @@ from .serializers import (
 class AuthLibraryView(viewsets.ModelViewSet):
     serializer_class = AuthLibrarySerializer
     queryset = AuthLibrary.objects.all()
-    authentication_classes = [TokenAuthentication]
+    # authentication_classes = [TokenAuthentication]
 
-    def get_permissions(self):
-        if self.action == "list":
-            self.permission_classes = []
-        else:
-            self.permission_classes = [IsAdminUser]
-        return super(self.__class__, self).get_permissions()
+    # def get_permissions(self):
+    #     if self.action == "list":
+    #         self.permission_classes = []
+    #     else:
+    #         self.permission_classes = [IsAdminUser]
+    #     return super(self.__class__, self).get_permissions()
 
     def perform_create(self, serializer):
         serializer.save(**self.request.data, created_by=self.request.user)

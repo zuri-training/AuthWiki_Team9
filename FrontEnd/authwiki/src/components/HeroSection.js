@@ -24,15 +24,15 @@ const HeroSection = () => {
           <FaSquareFull className="icon" />
         </h2>
       </div>
-      <Link to="/allauthlib" className="docs-btn">
+      <Link to="/library" className="docs-btn">
         View Authentication libraries
       </Link>
       <div className="para-container">
         <p className="desc">
-          <a href="#">AuthWiki</a> combines the best developer experience with
-          an obsessive focus on end-user performance.{" "}
+          <Link to="library">AuthWiki</Link> combines the best developer
+          experience with an obsessive focus on end-user performance.
           <span>
-            Our paltform enables frontend teams to do their best work.
+            Our platform enables frontend teams to do their best work.
           </span>
         </p>
       </div>

@@ -23,9 +23,9 @@ const AuthLib = () => {
     dispatch(getIDAuthLib(authlibId));
   }, [authlibId, dispatch]);
 
-  //   if (notFound) {
-  //     return <Navigate to="/dashboard" />;
-  //   }
+  if (notFound) {
+    return <Navigate to="/library" />;
+  }
   if (isLoading) {
     return <Loader />;
   }

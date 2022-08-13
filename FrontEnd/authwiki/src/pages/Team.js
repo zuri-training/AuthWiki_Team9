@@ -4,7 +4,7 @@ import Members from "./member";
 const Team = () => {
   return (
     <TeamCSS>
-      <div class="header">
+      <div className="header">
         <div className="title">
           <div className="select">
             <div>MEET</div> <p>the</p> <div>TEAM</div>
@@ -12,10 +12,10 @@ const Team = () => {
           <p>RESPONSIBLE FOR CREATING THE MAGIC & AESTHETICS</p>
         </div>
       </div>
-      <div class="team">
-        {Members.map((item) => {
+      <div className="team">
+        {Members.map((item, i) => {
           return (
-            <div class="member">
+            <div className="member" key={i}>
               <img
                 className="image"
                 src={item.image}

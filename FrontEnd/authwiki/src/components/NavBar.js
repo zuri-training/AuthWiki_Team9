@@ -34,7 +34,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link to="/allauthlib">Examples</Link>
+              <Link to="/library">Examples</Link>
             </li>
 
             <li>
