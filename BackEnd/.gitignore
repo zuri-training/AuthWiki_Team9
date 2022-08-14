@@ -40,6 +40,7 @@ pip-delete-this-directory.txt
 
 db.sqlite3
 # Unit test / coverage reports
+AuthWikiCore/settings.py
 static/
 **/migrations/**
 !**/migrations
