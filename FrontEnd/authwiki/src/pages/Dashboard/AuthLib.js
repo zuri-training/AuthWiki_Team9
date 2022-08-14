@@ -151,35 +151,26 @@ const AuthLib = () => {
             </div>
           </div>
 
-          <div className="usage">
-            <h4>USAGE</h4>
-            <p>
-              jwt.sign(payload, secretOrPrivateKey, [options, callback])
-              (Asynchronous) If a callback is supplied, the callback is called
-              with the err or the JWT. (Synchronous) Returns the JsonWebToken as
-              string payload could be an object literal, buffer or string
-              representing valid JSON.
-            </p>
-          </div>
           <div id="security">
             <h4>Security</h4>
             <p>
-              Security issues are handled under the supervision of the Django
-              security team. Please report security issues by emailing
-              security@djangoproject.com. The project maintainers will then work
-              with you to resolve any issues where required, prior to any public
-              disclosure.
+              Security issues are handled under the supervision of the AuthWiki
+              Security Team. Please report security issues by emailing
+              <span className="tag"> alert@authwiki.com </span>. The project
+              maintainers will then work with you to resolve any issues where
+              required, prior to any public disclosure.
             </p>
           </div>
           <div className="license">
             <h4>License</h4>
             <p>
-              Copyright © 2011-present, Encode OSS Ltd. All rights reserved.
+              <span>
+                Copyright &copy; 2022 - present, AuthWiki. All rights reserved.
+              </span>
+              <br></br>
               Redistribution and use in source and binary forms, with or without
-              modification, are permitted provided that the following conditions
-              are met: Redistributions of source code must retain the above
-              copyright notice, this list of conditions and the following
-              disclaimer.
+              modification, are permitted. Redistributions of source code must
+              retain the above copyright notice.
             </p>
           </div>
         </div>

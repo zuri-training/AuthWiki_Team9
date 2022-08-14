@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Code from "../../components/Code";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getIDAuthLib } from "../../store/authlibId/authlibIDSlice";
 import { Navigate } from "react-router-dom";
-import AuthLibCSS from "../../css/AuthLib";
+import AuthLibCSS from "./AuthLib";
 import Loader from "../../components/Loader";
 import { ImCodepen } from "react-icons/im";
-import Comment from "../../components/Comment";
-import { FaDownload } from "react-icons/fa";
 
 const AuthLib = () => {
   const { authlibId } = useParams();
@@ -17,7 +15,6 @@ const AuthLib = () => {
   const { notFound, authlib, isLoading } = useSelector(
     (state) => state.authlibID
   );
-  const [showComment, setShowComment] = useState(false);
 
   useEffect(() => {
     dispatch(getIDAuthLib(authlibId));
@@ -31,7 +28,6 @@ const AuthLib = () => {
   }
   const {
     code_snippet,
-    comment,
     created_by,
     description,
     image,
@@ -69,26 +65,6 @@ const AuthLib = () => {
             <a href={repo_link} target="_blank" rel="noreferrer">
               View Repository
             </a>
-            <button
-              id="btn"
-              className="download-btn"
-              style={{
-                backgroundColor: "#2eb394",
-                color: "#09241E",
-                borderRadius: "5px",
-                border: "none",
-                float: "right",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "10px 10px",
-                fontSize: "15px",
-                fontWeight: "bold",
-              }}
-            >
-              <FaDownload size="20px" />
-              Download
-            </button>
           </p>
 
           <div className="description">
@@ -130,56 +106,38 @@ const AuthLib = () => {
               );
             })}
           </div>
-          <div className="comment">
-            <h4>Comment</h4>
-            <div className="input-container">
-              <input type="text" placeholder="Comment.." />
-              <button className="btn">Comment</button>
-            </div>
+          <div className="join-now">
+            <h1>Sign Up on AuthWiki</h1>
+            <p>With a free account, you can do more. </p>
 
-            <div id="installation">
-              <button
-                className="comment-view"
-                onClick={() => setShowComment(!showComment)}
-              >
-                {showComment ? "Show Less Comment" : "Show More Comment"}
-              </button>
-              {showComment &&
-                comment?.map((item) => {
-                  return <Comment key={item.id} {...item}></Comment>;
-                })}
-            </div>
-          </div>
-
-          <div className="usage">
-            <h4>USAGE</h4>
-            <p>
-              jwt.sign(payload, secretOrPrivateKey, [options, callback])
-              (Asynchronous) If a callback is supplied, the callback is called
-              with the err or the JWT. (Synchronous) Returns the JsonWebToken as
-              string payload could be an object literal, buffer or string
-              representing valid JSON.
+            <Link className="btn" to="/register">
+              Sign Up
+            </Link>
+            <p className="login">
+              Already have an account ? <Link to="/login">Log In</Link>
             </p>
           </div>
+
           <div id="security">
             <h4>Security</h4>
             <p>
-              Security issues are handled under the supervision of the Django
-              security team. Please report security issues by emailing
-              security@djangoproject.com. The project maintainers will then work
-              with you to resolve any issues where required, prior to any public
-              disclosure.
+              Security issues are handled under the supervision of the AuthWiki
+              Security Team. Please report security issues by emailing
+              <span className="tag"> alert@authwiki.com </span>. The project
+              maintainers will then work with you to resolve any issues where
+              required, prior to any public disclosure.
             </p>
           </div>
           <div className="license">
             <h4>License</h4>
             <p>
-              Copyright © 2011-present, Encode OSS Ltd. All rights reserved.
+              <span>
+                Copyright &copy; 2022 - present, AuthWiki. All rights reserved.
+              </span>
+              <br></br>
               Redistribution and use in source and binary forms, with or without
-              modification, are permitted provided that the following conditions
-              are met: Redistributions of source code must retain the above
-              copyright notice, this list of conditions and the following
-              disclaimer.
+              modification, are permitted. Redistributions of source code must
+              retain the above copyright notice.
             </p>
           </div>
         </div>
