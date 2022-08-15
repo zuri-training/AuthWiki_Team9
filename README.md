@@ -12,7 +12,9 @@
 - #### [API Documentation](https://authwiki9be.zurifordummies.com/api/schema/swagger-ui/#/)
 - #### [Individual Contributions](https://github.com/zuri-training/AuthWiki_Team9/tree/main/Contributions)
 
+
 ## User Activity
+<img width="1374" alt="Screenshot 2022-08-15 at 7 03 16 PM" src="https://user-images.githubusercontent.com/48237269/184690374-a9ebc1e7-5c9d-42c7-ac80-db88540cb82d.png">
 
 - Unauthenticated user can view:
 
