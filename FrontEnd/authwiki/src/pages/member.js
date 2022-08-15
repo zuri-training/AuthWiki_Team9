@@ -60,6 +60,11 @@ const Members = [
     name: "Oghenetega Akpomedaye",
     title: "Product Designer",
   },
+  {
+    image: "https://i.ibb.co/DRh5wnm/IMG-20220815-WA0009.jpg",
+    name: "Ojukwu Amarachi",
+    title: "Product Designer",
+  },  
 ];
 
 export default Members;
