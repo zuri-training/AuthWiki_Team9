@@ -45,9 +45,9 @@ const Members = [
     title: "Full-Stack Developer",
   },
   {
-    image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
-    name: "Adeyemo Ridwan",
-    title: "Lead Developer",
+    image: "https://i.ibb.co/RC6C2TM/bilal.jpg",
+    name: "Bilal Mubarak Idris",
+    title: "Full-Stack Developer",
   },
   {
     image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
