@@ -2,23 +2,24 @@ const Members = [
   {
     image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
     name: "Adeyemo Ridwan",
-    title: "Lead Developer",
+    title: "Lead / Full-Stack Developer",
+  },
+   {
+    image: "https://i.ibb.co/ZBwmdV2/ezinne.jpg",
+    name: "Ezinne Miracle Ozukalu",
+    title: "Product Designer",
+  },
+    {
+    image: "https://i.ibb.co/QKcpVqt/IMG-20220814-160446.jpg",
+    name: "Ajibodu Christian",
+    title: "Full-Stack Developer",
   },
   {
     image: "https://i.ibb.co/Fhpxsqh/Proxii.jpg",
     name: "Akeem Adeoti",
     title: "Backend Developer",
-  },
-  {
-    image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
-    name: "Adeyemo Ridwan",
-    title: "Lead Developer",
-  },
-  {
-    image: "https://i.ibb.co/QKcpVqt/IMG-20220814-160446.jpg",
-    name: "Ajibodu Christian",
-    title: "Full-Stack Developer",
-  },
+  }, 
+
   {
     image: "https://i.ibb.co/3MfsSd1/85946139-E2-E9-4-B37-8-A24-52724-BEA964-F.jpg",
     name: "Evangel Soribe",
