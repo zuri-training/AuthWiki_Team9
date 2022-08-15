@@ -24,7 +24,7 @@ const SideBar = () => {
           </div>
           <div className="pages">
             <ul>
-              <li>
+              {/* <li>
                 <BiBookBookmark size="30px" color="#a9a9a5" />
                 <NavLink
                   to="/"
@@ -34,7 +34,7 @@ const SideBar = () => {
                 >
                   Getting Started
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <HiCode size="30px" color="#a9a9a5" />

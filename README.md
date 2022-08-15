@@ -12,6 +12,22 @@
 - #### [API Documentation](https://authwiki9be.zurifordummies.com/api/schema/swagger-ui/#/)
 - #### [Individual Contributions](https://github.com/zuri-training/AuthWiki_Team9/tree/main/Contributions)
 
+## User Activity
+
+- Unauthenticated user can view:
+
+  - [Home Page](https://authwiki.zurifordummies.com/)
+  - [Browse Authentication Library](https://authwiki.zurifordummies.com/library)
+  - [Individual Authentication Library](https://authwiki.zurifordummies.com/library/2)
+  - [Team Page](https://authwiki.zurifordummies.com/library/2)
+
+- Authenticated user can:
+  - They have access to all the Unauthenticated user features.
+  - [Download Authentication Library](https://authwiki.zurifordummies.com/library/2)
+  - [Can Comment and make reactions on Authentication Library](https://authwiki.zurifordummies.com/library/2)
+  - [Can Edit Profile and logout](https://authwiki.zurifordummies.com/profile)
+  - [Can download Authentication Library](https://authwiki.zurifordummies.com/library/2)
+
 ### **_Fork and Clone Repository_**
 
 1. Visit the Repository to the Project on Github Website: https://github.com/zuri-training/AuthWiki_Team9
