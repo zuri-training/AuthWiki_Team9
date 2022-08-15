@@ -61,6 +61,11 @@ const Members = [
     title: "Product Designer",
   },
   {
+    image: "https://i.ibb.co/3yBm6BK/moses.jpg",
+    name: "Oluwasegun Moses Olopade",
+    title: "Backend Developer",
+  },
+  {
     image: "https://i.ibb.co/DRh5wnm/IMG-20220815-WA0009.jpg",
     name: "Ojukwu Amarachi",
     title: "Product Designer",
