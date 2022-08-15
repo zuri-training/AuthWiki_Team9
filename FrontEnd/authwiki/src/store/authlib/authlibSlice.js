@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import customFetch from "../../utils/axios";
-import authHeader from "../../utils/authHeader";
+// import authHeader from "../../utils/authHeader";
 import { toast } from "react-toastify";
 
 const initialState = {
