@@ -40,9 +40,9 @@ const Members = [
     title: "Product Designer",
   },
   {
-    image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
-    name: "Adeyemo Ridwan",
-    title: "Lead Developer",
+    image: "https://i.ibb.co/VjVkXt7/IMG-20220111-152523-372.jpg",
+    name: "Stanley Okonkwo",
+    title: "Full-Stack Developer",
   },
   {
     image: "https://i.ibb.co/bBkTs3D/Passport-Adeyemo-Ridwan-Damilare.jpg",
