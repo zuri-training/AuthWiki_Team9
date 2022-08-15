@@ -60,6 +60,11 @@ const Members = [
     name: "Oghenetega Akpomedaye",
     title: "Product Designer",
   },
+  {
+    image: "https://i.ibb.co/3yBm6BK/moses.jpg",
+    name: "Oluwasegun Moses Olopade",
+    title: "Backend Developer",
+  },
 ];
 
 export default Members;
