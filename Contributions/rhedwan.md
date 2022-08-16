@@ -32,3 +32,4 @@
 | Bug on the Frontend: showPassword visibility     | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/145)  |
 | Implement Retrieving of Auth Libraries           | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/146)  |
 | fix the Installation code snippet          | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/147)  |
+| Deployed application for teaam        | [AuthWiki](https://authwiki.zurifordummies.com/), [Forge](https://forge.zurifordummies.com/), [Pricify](http://pricify.zurifordummies.com/), [Comparely](http://comparelyfe.zurifordummies.com/) [Colflix](https://colflix.zurifordummies.com/) |
