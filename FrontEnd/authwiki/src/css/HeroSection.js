@@ -29,7 +29,7 @@ const CSS = styled.div`
     border-image-slice: 1;
     border-width: 1px;
     border-image-source: linear-gradient(to left, #2d4cf3, #94e992);
-    padding: 2em 8em;
+    padding: 2em 2em;
     text-align: center;
   }
 

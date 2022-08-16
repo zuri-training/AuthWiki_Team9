@@ -29,7 +29,8 @@ export const TestimonialCSS = styled.main`
   }
 
   .testimonial_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
@@ -38,7 +39,6 @@ export const TestimonialCSS = styled.main`
     border-radius: 4px;
     border: 2px solid var(--color4);
     padding: 40px;
-    width: 30%;
     color: #a9a9a5;
   }
 
@@ -62,5 +62,13 @@ export const TestimonialCSS = styled.main`
 
   .testimonial_content {
     margin-top: 20px;
+  }
+  @media (max-width: 885px) {
+    .nav ul.login {
+      display: none;
+    }
+    .testimonial_container {
+      grid-template-columns: 1fr;
+    }
   }
 `;
