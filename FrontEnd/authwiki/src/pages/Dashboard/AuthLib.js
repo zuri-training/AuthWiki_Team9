@@ -10,6 +10,7 @@ import Loader from "../../components/Loader";
 import { ImCodepen } from "react-icons/im";
 import Comment from "../../components/Comment";
 import { FaDownload } from "react-icons/fa";
+import sample from "../../images/icons/sample.png";
 
 const AuthLib = () => {
   const { authlibId } = useParams();
@@ -69,9 +70,11 @@ const AuthLib = () => {
             <a href={repo_link} target="_blank" rel="noreferrer">
               View Repository
             </a>
-            <button
+            <a
               id="btn"
               className="download-btn"
+              href={sample}
+              download={`${name}.${language ? "js" : "py"}`}
               style={{
                 backgroundColor: "#2eb394",
                 color: "#09241E",
@@ -84,11 +87,12 @@ const AuthLib = () => {
                 padding: "10px 10px",
                 fontSize: "15px",
                 fontWeight: "bold",
+                cursor: "pointer",
               }}
             >
               <FaDownload size="20px" />
               Download
-            </button>
+            </a>
           </p>
 
           <div className="description">
