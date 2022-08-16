@@ -11,8 +11,8 @@ const FooterCSS = styled.footer`
   }
   .grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
     padding: 20px;
   }
   .grid-item {

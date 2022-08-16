@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const CSS = styled.div`
+  /* padding: 0 30px; */
+
   .hero {
     margin-top: 2em;
     display: flex;
@@ -71,16 +73,11 @@ const CSS = styled.div`
     color: #800080;
     text-decoration: none;
   }
-
-  /* @media only screen and (max-width: 1024px) {
-    .title {
-      font-size: 8em;
-    }
-    .para-container {
-      width: 95%;
-      text-align: center;
-    }
-  } */
+  @media (max-width: 885px) {
+    /* .hero {
+      margin-left: 40px;
+    } */
+  }
 `;
 
 export default CSS;
