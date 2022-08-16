@@ -6,6 +6,7 @@
 
 | Issue/ Task                                                | Pull Request / Issues / Commit                                                  |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Contributions History                            | [Graph History](https://github.com/zuri-training/AuthWiki_Team9/graphs/contributors),  [Commit History](https://github.com/zuri-training/AuthWiki_Team9/commits?author=rhedwan) |
 | Implement Logout functionality                             | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/140) |
 | Implement Dashboard Functionality                          | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/124) |
 | Backend Project Setup                                      | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/30)  |
@@ -32,4 +33,4 @@
 | Bug on the Frontend: showPassword visibility     | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/145)  |
 | Implement Retrieving of Auth Libraries           | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/146)  |
 | fix the Installation code snippet          | [Merged Pull Request](https://github.com/zuri-training/AuthWiki_Team9/pull/147)  |
-| Deployed application for teaam        | [AuthWiki](https://authwiki.zurifordummies.com/), [Forge](https://forge.zurifordummies.com/), [Pricify](http://pricify.zurifordummies.com/), [Comparely](http://comparelyfe.zurifordummies.com/) [Colflix](https://colflix.zurifordummies.com/) |
+| Deployed application for teams        | [AuthWiki](https://authwiki.zurifordummies.com/), [Forge](https://forge.zurifordummies.com/), [Pricify](http://pricify.zurifordummies.com/), [Comparely](http://comparelyfe.zurifordummies.com/) [Colflix](https://colflix.zurifordummies.com/) |
