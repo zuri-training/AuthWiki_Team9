@@ -5,7 +5,7 @@ import search from "../images/icons/search.png";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { HiCode } from "react-icons/hi";
-import { BiBookBookmark } from "react-icons/bi";
+// import { BiBookBookmark } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { logoutUser } from "../store/user/userSlice";

@@ -7,7 +7,7 @@ import Csharp from "../images/icons/Csharp.png";
 import JS from "../images/icons/JS.png";
 import PHP from "../images/icons/PHP.png";
 import Python from "../images/icons/Python.png";
-import TS from "../images/icons/TS.png";
+// import TS from "../images/icons/TS.png";
 
 const GettingStarted = () => {
   return (
@@ -35,9 +35,9 @@ const GettingStarted = () => {
           <li className="li">
             <img src={cplus} alt="C++" />
           </li>
-          <li className="li">
+          {/* <li className="li">
             <img src={TS} alt="TS" />
-          </li>
+          </li> */}
         </ul>
       </div>
 

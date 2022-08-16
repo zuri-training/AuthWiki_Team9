@@ -19,6 +19,7 @@ const NavBarCSS = styled.header`
     font-size: 20px;
     line-height: 30px;
     cursor: pointer;
+    display: block !important;
   }
   .nav ul li a {
     text-decoration: none;
@@ -50,6 +51,15 @@ const NavBarCSS = styled.header`
     border-radius: 4px;
     order: 1;
     flex-grow: 0;
+  }
+  .login {
+    display: flex;
+  }
+  @media (max-width: 885px) {
+    /* margin: 0 20px; */
+    .nav ul.login {
+      display: none;
+    }
   }
 `;
 

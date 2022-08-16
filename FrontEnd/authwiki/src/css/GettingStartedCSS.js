@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const GettingStartedCSS = styled.main`
+  padding: 20px;
   .ul {
-    overflow: hidden;
     list-style-type: none;
-    justify-content: space-evenly;
-    align-items: left;
     margin: auto;
-    padding: 0px;
+    padding: 10px;
     padding-bottom: 15px;
-    gap: 20px;
-    display: flex;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .li {
@@ -40,20 +41,14 @@ export const GettingStartedCSS = styled.main`
   }
 
   #div3 {
-    align-items: center;
-    justify-content: center;
-    display: block;
-  }
-  #imgdiv {
-    width: 65%;
-    float: left;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .img {
-    width: 90%;
-  }
-  #indiv {
-    width: 35%;
-    float: left;
+    width: 100%;
+    height: 100%;
   }
   ul.a ::marker,
   ul.b ::marker,
@@ -88,5 +83,13 @@ export const GettingStartedCSS = styled.main`
     font-size: 16px;
     font-weight: 400;
     color: #a9a9a5;
+  }
+  @media (max-width: 885px) {
+    .ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #div3 {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `;
