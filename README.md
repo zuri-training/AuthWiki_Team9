@@ -5,7 +5,7 @@
 ## Resource
 
 - #### [Product Documentation](https://docs.google.com/document/d/1SEP5obUFLwb9HqHoffOn8VYiw1m6DMjXsiSzt22bbh0/edit?usp=sharing)
-- #### [Figma](https://www.figma.com/file/ZiuCDL7seXKfkdzfCHXtkG/Auth_Wiki?node-id=24%3A4)
+- #### [Figma](https://www.figma.com/file/USDw28ms1nZClxuyTjZHMY/Team_9_AUTH_WIKI_Final_Design?node-id=577%3A1097)
 - #### [Database Schema](https://www.figma.com/file/PM9TfN8K3UakzbYPlEBG1g/AUTH-WIKI?node-id=0%3A1)
 - #### [First Presentation](https://vimeo.com/735146052)
 - #### [Live Link](https://authwiki.zurifordummies.com/)
