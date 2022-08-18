@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +26,10 @@ SECRET_KEY = "django-insecure-jv8_)*edm#p8^^&@q@1gqfdm!+5pgwodzkdi6i5a+v9nft7bsg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['authwiki9be.zurifordummies.com', 'www.authwiki9be.zurifordummies.com',
-                 '148.251.6.230', 'localhost', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['authwiki9be.zurifordummies.com', 'www.authwiki9be.zurifordummies.com',
+#                  '148.251.6.230', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['authwikibe.rhedwan.com', 'www.authwiki9be.rhedwan.com',
+                 '104.248.59.50', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,7 +53,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-	'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -85,9 +87,9 @@ WSGI_APPLICATION = "AuthWikiCore.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'authwiki9',
-        'USER': 'rhedwan',
-        'PASSWORD': 'password',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '',
     }
