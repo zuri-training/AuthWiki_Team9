@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "https://authwiki9be.zurifordummies.com",
+  baseURL: "https://authwikibe.rhedwan.com/",
 });
 
 export default customFetch;
