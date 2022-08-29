@@ -8,8 +8,8 @@
 - #### [Figma](https://www.figma.com/file/USDw28ms1nZClxuyTjZHMY/Team_9_AUTH_WIKI_Final_Design?node-id=577%3A1097)
 - #### [Database Schema](https://www.figma.com/file/PM9TfN8K3UakzbYPlEBG1g/AUTH-WIKI?node-id=0%3A1)
 - #### [First Presentation](https://vimeo.com/735146052)
-- #### [Live Link](https://authwiki.zurifordummies.com/)
-- #### [API Documentation](https://authwiki9be.zurifordummies.com/api/schema/swagger-ui/#/)
+- #### [Live Link](https://authwiki.netlify.app/)
+- #### [API Documentation](https://authwikibe.rhedwan.com/api/schema/swagger-ui/#/)
 - #### [Individual Contributions](https://github.com/zuri-training/AuthWiki_Team9/tree/main/Contributions)
 
 
